@@ -22,6 +22,7 @@ namespace kursach
         public RegWin()
         {
             InitializeComponent();
+            
         }
     }
 }

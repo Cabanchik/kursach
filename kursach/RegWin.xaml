@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kursach"
         mc:Ignorable="d"
-        Title="RegWin" Height="450" Width="800">
+        Title="RegWin" Height="400" Width="900" WindowStartupLocation="CenterScreen">
+    <Window.Resources>        
+        <Style TargetType="Border" x:Key="sas">
+            <Setter Property="CornerRadius" Value="10" ></Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
+        
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -20,16 +26,15 @@
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
-                <Label Grid.Row="0" Grid.Column="0" Content="Регистрация" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" ></Label>
-                <Label Grid.Row="1" Grid.Column="0" Content="Логин"></Label>
-                <Label Grid.Row="2" Grid.Column="0" Content="Пароль"></Label>
-                <Label Grid.Row="3" Grid.Column="0" Content="Повторите пароль"></Label>
-                <TextBox Grid.Row="1" Grid.Column="1" Width="100" VerticalContentAlignment="Center">
-                    <TextBox.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="10"></Setter>
-                        </Style>
+                <Label FontSize="20" Grid.Row="0" Grid.Column="0" Content="Регистрация" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" ></Label>
+                <Label FontSize="20" Grid.Row="1" Grid.Column="0" Content="Логин"></Label>
+                <Label FontSize="20" Grid.Row="2" Grid.Column="0" Content="Пароль"></Label>
+                <Label FontSize="20" Grid.Row="3" Grid.Column="0" Content="Повторите пароль"></Label>
+                <TextBox  Grid.Row="1" Grid.Column="1" Width="100" VerticalContentAlignment="Center">
+                    <TextBox.Resources >
+                        <Style Resources="{StaticResource sas}"></Style>
                     </TextBox.Resources>
+                    
                 </TextBox>
                 <TextBox Grid.Row="2" Grid.Column="1" Width="100" VerticalContentAlignment="Center">
                     <TextBox.Resources>
@@ -46,7 +51,7 @@
                     </TextBox.Resources>
                 </TextBox>
                 <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Vertical" HorizontalAlignment="Center"  >
-                    <Button Content="Зарегистрироваться" Margin="0,5">
+                    <Button FontSize="20" Content="Зарегистрироваться" Margin="0,5" Background="#249F09">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="10"></Setter>

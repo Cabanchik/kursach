@@ -23,5 +23,11 @@ namespace kursach
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            RegWin regWin = new RegWin();
+            regWin.ShowDialog();
+        }
     }
 }
