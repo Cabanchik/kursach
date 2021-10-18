@@ -22,7 +22,7 @@
                 <Label FontSize="20" Grid.Row="0" Grid.Column="0" Content="ВХОД" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" ></Label>
                 <Label FontSize="20" Grid.Row="1" Grid.Column="0" Content="Логин" Margin="0,0,26,0"></Label>
                 <Label FontSize="20" Grid.Row="2" Grid.Column="0" Content="Пароль" Margin="0,0,13,0"></Label>
-                <TextBox Grid.Row="1" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Margin="81,0,0,0" Background="#4eb15a" BorderBrush="Black" BorderThickness="2">
+                <TextBox Grid.Row="1" VerticalContentAlignment="Center" Grid.ColumnSpan="2" Margin="81,0,0,0" Background="#4eb15a" BorderBrush="Black" BorderThickness="2" TextChanged="TextBox_TextChanged">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>

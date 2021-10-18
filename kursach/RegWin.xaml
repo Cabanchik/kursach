@@ -11,8 +11,8 @@
             <Setter Property="CornerRadius" Value="10" ></Setter>
         </Style>
     </Window.Resources>-->
-    <Grid Background="#C6F292">
-        
+    <Grid Background="#8be392">
+
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -30,21 +30,21 @@
                 <Label FontSize="20" Grid.Row="1" Grid.Column="0" Content="Логин"></Label>
                 <Label FontSize="20" Grid.Row="2" Grid.Column="0" Content="Пароль"></Label>
                 <Label FontSize="20" Grid.Row="3" Grid.Column="0" Content="Повторите пароль"></Label>
-                <TextBox  Grid.Row="1" Grid.Column="1" Width="100" VerticalContentAlignment="Center" Background="#82C03B" BorderBrush="Black" BorderThickness="2">
+                <TextBox  Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" Background="#4eb15a" BorderBrush="Black" BorderThickness="2" Margin="0,0,-26,0">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <TextBox Grid.Row="2" Grid.Column="1" Width="100" VerticalContentAlignment="Center" Background="#82C03B" BorderBrush="Black" BorderThickness="2">
+                <TextBox Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" Background="#4eb15a" BorderBrush="Black" BorderThickness="2" Margin="0,0,-26,0">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <TextBox Grid.Row="3" Grid.Column="1" Width="100" VerticalContentAlignment="Center" Background="#82C03B" BorderBrush="Black" BorderThickness="2">
+                <TextBox Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" Background="#4eb15a" BorderBrush="Black" BorderThickness="2" Margin="0,0,-26,0">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
@@ -52,19 +52,19 @@
                     </TextBox.Resources>
                 </TextBox>
                 <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Vertical" HorizontalAlignment="Center"  >
-                    <Button VerticalContentAlignment="Center" FontSize="20" Content="Зарегистрироваться" Margin="0,5" Background="#249F09" BorderThickness="3" BorderBrush="Black">
+                    <Button VerticalContentAlignment="Center" FontSize="20" Content="Зарегистрироваться" Margin="0,5" Background="#4eb15a" BorderThickness="3" BorderBrush="Black" Height="52" Width="205">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="10"></Setter>
-                                
+
                             </Style>
                         </Button.Resources>
                     </Button>
-                    
+
                 </StackPanel>
 
             </Grid>
         </StackPanel>
-        
+
     </Grid>
 </Window>

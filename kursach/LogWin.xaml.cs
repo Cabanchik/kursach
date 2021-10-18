@@ -29,5 +29,10 @@ namespace kursach
             RegWin regWin = new RegWin();
             regWin.ShowDialog();
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
