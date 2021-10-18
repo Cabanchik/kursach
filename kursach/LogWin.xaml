@@ -1,0 +1,51 @@
+﻿<Window x:Class="kursach.LogWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kursach"
+        mc:Ignorable="d"
+        Title="LogWin" Height="250" Width="500">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="ВХОД" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" ></Label>
+                <Label Grid.Row="1" Grid.Column="0" Content="логин"></Label>
+                <Label Grid.Row="2" Grid.Column="0" Content="пароль"></Label>
+                <TextBox Grid.Row="1" Grid.Column="1" Width="100" VerticalContentAlignment="Center">
+                    <TextBox.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <TextBox Grid.Row="2" Grid.Column="1" Width="100" VerticalContentAlignment="Center">
+                    <TextBox.Resources>
+                        <Style TargetType="Border"> 
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" Margin="0,10,0,0" >
+                    <Button  Content="Войти как гость"></Button>
+                    <TextBlock Text="или"></TextBlock>
+                    <Button Content="Зарегистрироваться"></Button>
+                </StackPanel>
+                
+                
+                
+            </Grid>
+
+        </StackPanel>
+    </Grid>
+</Window>
