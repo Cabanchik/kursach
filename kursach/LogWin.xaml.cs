@@ -34,5 +34,10 @@ namespace kursach
         {
 
         }
+
+        private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
     }
 }
