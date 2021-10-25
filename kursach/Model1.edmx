@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище heroku_e7222c258ac0aa4Model" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="gender">
+          <Key>
+            <PropertyRef Name="gender_id" />
+          </Key>
+          <Property Name="gender_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="status">
+          <Key>
+            <PropertyRef Name="status_id" />
+          </Key>
+          <Property Name="status_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="task">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="varchar" MaxLength="45" />
+          <Property Name="purpose_time" Type="datetime" Precision="0" />
+          <Property Name="start_time" Type="datetime" Precision="0" />
+          <Property Name="status_id" Type="int" />
+          <Property Name="annotation" Type="varchar" MaxLength="700" />
+          <Property Name="end_time" Type="datetime" Precision="0" />
+          <Property Name="user_id" Type="int" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="45" />
+          <Property Name="surname" Type="varchar" MaxLength="45" />
+          <Property Name="gender_id" Type="int" />
+          <Property Name="birth_date" Type="datetime" Precision="0" />
+          <Property Name="user_pic" Type="mediumblob" />
+          <Property Name="login" Type="varchar" MaxLength="20" />
+          <Property Name="password" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <Association Name="megasus">
+          <End Role="user" Type="Self.user" Multiplicity="0..1" />
+          <End Role="task" Type="Self.task" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="task">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="supersus">
+          <End Role="status" Type="Self.status" Multiplicity="0..1" />
+          <End Role="task" Type="Self.task" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="status">
+              <PropertyRef Name="status_id" />
+            </Principal>
+            <Dependent Role="task">
+              <PropertyRef Name="status_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="supersus2">
+          <End Role="gender" Type="Self.gender" Multiplicity="0..1" />
+          <End Role="user" Type="Self.user" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="gender">
+              <PropertyRef Name="gender_id" />
+            </Principal>
+            <Dependent Role="user">
+              <PropertyRef Name="gender_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище heroku_e7222c258ac0aa4ModelContainer">
+          <EntitySet Name="gender" EntityType="Self.gender" Schema="heroku_e7222c258ac0aa4" store:Type="Tables" />
+          <EntitySet Name="status" EntityType="Self.status" Schema="heroku_e7222c258ac0aa4" store:Type="Tables" />
+          <EntitySet Name="task" EntityType="Self.task" Schema="heroku_e7222c258ac0aa4" store:Type="Tables" />
+          <EntitySet Name="user" EntityType="Self.user" Schema="heroku_e7222c258ac0aa4" store:Type="Tables" />
+          <AssociationSet Name="megasus" Association="Self.megasus">
+            <End Role="user" EntitySet="user" />
+            <End Role="task" EntitySet="task" />
+          </AssociationSet>
+          <AssociationSet Name="supersus" Association="Self.supersus">
+            <End Role="status" EntitySet="status" />
+            <End Role="task" EntitySet="task" />
+          </AssociationSet>
+          <AssociationSet Name="supersus2" Association="Self.supersus2">
+            <End Role="gender" EntitySet="gender" />
+            <End Role="user" EntitySet="user" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="heroku_e7222c258ac0aa4Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="gender">
+          <Key>
+            <PropertyRef Name="gender_id" />
+          </Key>
+          <Property Name="gender_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="user" Relationship="Self.supersus2" FromRole="gender" ToRole="user" />
+        </EntityType>
+        <EntityType Name="status">
+          <Key>
+            <PropertyRef Name="status_id" />
+          </Key>
+          <Property Name="status_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="task" Relationship="Self.supersus" FromRole="status" ToRole="task" />
+        </EntityType>
+        <EntityType Name="task">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="purpose_time" Type="DateTime" />
+          <Property Name="start_time" Type="DateTime" />
+          <Property Name="status_id" Type="Int32" />
+          <Property Name="annotation" Type="String" MaxLength="700" FixedLength="false" Unicode="false" />
+          <Property Name="end_time" Type="DateTime" />
+          <Property Name="user_id" Type="Int32" />
+          <NavigationProperty Name="status" Relationship="Self.supersus" FromRole="task" ToRole="status" />
+          <NavigationProperty Name="user" Relationship="Self.megasus" FromRole="task" ToRole="user" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="user_id" />
+          </Key>
+          <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="surname" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="gender_id" Type="Int32" />
+          <Property Name="birth_date" Type="DateTime" />
+          <Property Name="user_pic" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="login" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="gender" Relationship="Self.supersus2" FromRole="user" ToRole="gender" />
+          <NavigationProperty Name="task" Relationship="Self.megasus" FromRole="user" ToRole="task" />
+        </EntityType>
+        <Association Name="supersus2">
+          <End Role="gender" Type="Self.gender" Multiplicity="0..1" />
+          <End Role="user" Type="Self.user" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="gender">
+              <PropertyRef Name="gender_id" />
+            </Principal>
+            <Dependent Role="user">
+              <PropertyRef Name="gender_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="supersus">
+          <End Role="status" Type="Self.status" Multiplicity="0..1" />
+          <End Role="task" Type="Self.task" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="status">
+              <PropertyRef Name="status_id" />
+            </Principal>
+            <Dependent Role="task">
+              <PropertyRef Name="status_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="megasus">
+          <End Role="user" Type="Self.user" Multiplicity="0..1" />
+          <End Role="task" Type="Self.task" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="user">
+              <PropertyRef Name="user_id" />
+            </Principal>
+            <Dependent Role="task">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="heroku_e7222c258ac0aa4Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="gender" EntityType="Self.gender" />
+          <EntitySet Name="status" EntityType="Self.status" />
+          <EntitySet Name="task" EntityType="Self.task" />
+          <EntitySet Name="user" EntityType="Self.user" />
+          <AssociationSet Name="supersus2" Association="Self.supersus2">
+            <End Role="gender" EntitySet="gender" />
+            <End Role="user" EntitySet="user" />
+          </AssociationSet>
+          <AssociationSet Name="supersus" Association="Self.supersus">
+            <End Role="status" EntitySet="status" />
+            <End Role="task" EntitySet="task" />
+          </AssociationSet>
+          <AssociationSet Name="megasus" Association="Self.megasus">
+            <End Role="user" EntitySet="user" />
+            <End Role="task" EntitySet="task" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище heroku_e7222c258ac0aa4ModelContainer" CdmEntityContainer="heroku_e7222c258ac0aa4Entities">
+          <EntitySetMapping Name="gender">
+            <EntityTypeMapping TypeName="heroku_e7222c258ac0aa4Model.gender">
+              <MappingFragment StoreEntitySet="gender">
+                <ScalarProperty Name="gender_id" ColumnName="gender_id" />
+                <ScalarProperty Name="title" ColumnName="title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="status">
+            <EntityTypeMapping TypeName="heroku_e7222c258ac0aa4Model.status">
+              <MappingFragment StoreEntitySet="status">
+                <ScalarProperty Name="status_id" ColumnName="status_id" />
+                <ScalarProperty Name="title" ColumnName="title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="task">
+            <EntityTypeMapping TypeName="heroku_e7222c258ac0aa4Model.task">
+              <MappingFragment StoreEntitySet="task">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="purpose_time" ColumnName="purpose_time" />
+                <ScalarProperty Name="start_time" ColumnName="start_time" />
+                <ScalarProperty Name="status_id" ColumnName="status_id" />
+                <ScalarProperty Name="annotation" ColumnName="annotation" />
+                <ScalarProperty Name="end_time" ColumnName="end_time" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user">
+            <EntityTypeMapping TypeName="heroku_e7222c258ac0aa4Model.user">
+              <MappingFragment StoreEntitySet="user">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="surname" ColumnName="surname" />
+                <ScalarProperty Name="gender_id" ColumnName="gender_id" />
+                <ScalarProperty Name="birth_date" ColumnName="birth_date" />
+                <ScalarProperty Name="user_pic" ColumnName="user_pic" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="password" ColumnName="password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

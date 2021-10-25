@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kursach"
         mc:Ignorable="d"
-        Title="LogWin" Height="500" Width="1000" WindowStartupLocation="CenterScreen">
+        Title="LogWin" Height="500" Width="1000" WindowStartupLocation="CenterScreen" >
     <Grid Background="#dfffc8">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
             <Grid>
@@ -22,14 +22,14 @@
                 <Label FontWeight="Bold" FontSize="20" Grid.Row="0" Grid.Column="0" Content="ВХОД" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" ></Label>
                 <Label FontSize="20" Grid.Row="1" Grid.Column="0" Content="Логин" Margin="0,0,26,0"></Label>
                 <Label FontSize="20" Grid.Row="2" Grid.Column="0" Content="Пароль" Margin="0,0,13,0"></Label>
-                <TextBox Grid.Row="1" VerticalContentAlignment="Center" FontSize="15" Grid.ColumnSpan="2" Margin="81,0,0,0" Background="#acf09a" BorderBrush="Black" BorderThickness="2" TextChanged="TextBox_TextChanged">
+                <TextBox x:Name="log" Grid.Row="1" VerticalContentAlignment="Center" FontSize="15" Grid.ColumnSpan="2" Margin="81,0,0,0" Background="#acf09a" BorderBrush="Black" BorderThickness="2" TextChanged="TextBox_TextChanged">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <TextBox Grid.Row="2" VerticalContentAlignment="Center" FontSize="15" Grid.ColumnSpan="2" Margin="81,0,0,0" Background="#acf09a" BorderBrush="Black" BorderThickness="2">
+                <TextBox x:Name="pas" Grid.Row="2" VerticalContentAlignment="Center" FontSize="15" Grid.ColumnSpan="2" Margin="81,5,0,0" Background="#acf09a" BorderBrush="Black" BorderThickness="2">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
@@ -38,7 +38,7 @@
                 </TextBox>
 
                 <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Vertical" HorizontalAlignment="Center"  >
-                    <Button Background="#acf09a" BorderThickness="3" BorderBrush="Black" Content="Войти" Margin="0,5" FontSize="20">
+                    <Button Background="#acf09a" BorderThickness="3" BorderBrush="Black" Content="Войти" Margin="0,5" FontSize="20" Click="Button_Click_1">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="10"></Setter>
@@ -46,24 +46,27 @@
                             </Style>
                         </Button.Resources>
                     </Button>
+                    
                     <TextBlock FontSize="15" Text="Нет аккаунта?" HorizontalAlignment="Center" MouseDown="TextBlock_MouseDown"></TextBlock>
-                    <Button Foreground="Black" Background="#acf09a" BorderThickness="3" BorderBrush="Black" FontSize="20" Content="Зарегистрироваться" Click="Button_Click">
-                        <Button.Resources>
-                            <Style TargetType="Border">
-                                <Setter Property="CornerRadius" Value="10"></Setter>
+                    <StackPanel x:Name="stack" Orientation="Vertical" HorizontalAlignment="Center" Visibility="Hidden">
+                        <Button Foreground="Black" Background="#acf09a" BorderThickness="3" BorderBrush="Black" FontSize="20" Content="Зарегистрироваться" Click="Button_Click">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="10"></Setter>
 
-                            </Style>
-                        </Button.Resources>
-                    </Button>
-                    <TextBlock FontSize="15" HorizontalAlignment="Center" Text="или"></TextBlock>
-                    <Button Background="#acf09a" BorderThickness="3" BorderBrush="Black" FontSize="20"  Content="Войти как гость">
-                        <Button.Resources>
-                            <Style TargetType="Border">
-                                <Setter Property="CornerRadius" Value="10"></Setter>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                        <TextBlock FontSize="15" HorizontalAlignment="Center" Text="или"></TextBlock>
+                        <Button Background="#acf09a" BorderThickness="3" BorderBrush="Black" FontSize="20"  Content="Войти как гость">
+                            <Button.Resources>
+                                <Style TargetType="Border">
+                                    <Setter Property="CornerRadius" Value="10"></Setter>
 
-                            </Style>
-                        </Button.Resources>
-                    </Button>
+                                </Style>
+                            </Button.Resources>
+                        </Button>
+                    </StackPanel>
                 </StackPanel>
 
 

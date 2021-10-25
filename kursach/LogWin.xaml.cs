@@ -37,6 +37,31 @@ namespace kursach
 
         private void TextBlock_MouseDown(object sender, MouseButtonEventArgs e)
         {
+            if (stack.Visibility == Visibility.Hidden)
+            {
+                stack.Visibility = Visibility.Visible;
+                
+            }
+            else
+            {
+                stack.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var user = App.napominatel.user.Where(u => u.login == log.Text && u.password == pas.Text).FirstOrDefault();
+            if (user != null)
+            {
+                
+                MainWindow mainWindow = new MainWindow(user);
+                mainWindow.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Логин или пароль введен неверно!");
+            }
             
         }
     }

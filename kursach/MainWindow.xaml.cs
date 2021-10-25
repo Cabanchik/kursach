@@ -20,9 +20,24 @@ namespace kursach
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public user user1 { get; set; }
+        public MainWindow(user user2)
         {
             InitializeComponent();
+            user1 = user2;
+            view.ItemsSource = App.napominatel.task.Where(t=> t.user_id == user1.user_id).ToList();
+            view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id).ToList();
+            view3.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id).ToList();
+            view4.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id).ToList();
+            view5.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id).ToList();
+        }
+
+        
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            TaskAdd taskAdd = new TaskAdd();
+            taskAdd.ShowDialog(); 
         }
     }
 }
