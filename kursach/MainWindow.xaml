@@ -35,6 +35,7 @@
         <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="5,0">
             <StackPanel Orientation="Vertical" >
                 <Label Content="Начатые задачи" FontSize="30"  FontWeight="Bold" Foreground="#173D00"></Label>
+                
                 <ListView x:Name="view2" FontSize="15" Width="350"  Background="#FFFAAD" BorderThickness="3" BorderBrush="#173D00">
                     <ListView.Resources>
                         <Style TargetType="Border">
@@ -46,7 +47,11 @@
                     
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <Label Content="{Binding title}"></Label>
+                            <StackPanel Orientation="Horizontal">
+                                <Label Content="{Binding title}"></Label>
+                                <Button Content="Удалить"></Button>
+                            </StackPanel>
+                            
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>

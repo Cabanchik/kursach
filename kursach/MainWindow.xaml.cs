@@ -25,8 +25,8 @@ namespace kursach
         {
             InitializeComponent();
             user1 = user2;
-            view.ItemsSource = App.napominatel.task.Where(t=> t.user_id == user1.user_id).ToList();
-            view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id).ToList();
+            view.ItemsSource = App.napominatel.task.Where(t=> t.user_id == user1.user_id && t.status_id == 2).ToList();
+            view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
             view3.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id).ToList();
             view4.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id).ToList();
             view5.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id).ToList();
@@ -36,8 +36,13 @@ namespace kursach
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            TaskAdd taskAdd = new TaskAdd();
-            taskAdd.ShowDialog(); 
+            TaskAdd taskAdd = new TaskAdd(user1);
+            taskAdd.ShowDialog();
+            view.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
+            view.UpdateLayout();
+            view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();
+            view2.UpdateLayout();
+
         }
     }
 }
