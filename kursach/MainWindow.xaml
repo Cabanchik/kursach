@@ -36,7 +36,7 @@
             <StackPanel Orientation="Vertical" >
                 <Label Content="Начатые задачи" FontSize="30"  FontWeight="Bold" Foreground="#173D00"></Label>
                 
-                <ListView x:Name="view2" FontSize="18" Width="350"  Background="#FFFAAD" BorderThickness="3" BorderBrush="#173D00">
+                <ListView x:Name="view" FontSize="18" Width="350"  Background="#FFFAAD" BorderThickness="3" BorderBrush="#173D00">
                     <ListView.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
@@ -73,7 +73,7 @@
             </StackPanel>
             <StackPanel Orientation="Vertical" Margin="5,0" >
                 <Label Content="Будующие задачи" FontSize="30"  FontWeight="Bold" Foreground="#173D00"></Label>
-                <ListView x:Name="view" FontSize="15" Width="350"  Background="#FFFAAD" BorderThickness="3" BorderBrush="#173D00">
+                <ListView x:Name="view2" FontSize="18" Width="350"  Background="#FFFAAD" BorderThickness="3" BorderBrush="#173D00">
                     <ListView.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
@@ -109,7 +109,7 @@
             </StackPanel>
             <StackPanel Orientation="Vertical" Margin="5,0" >
                 <Label Content="Скоро просрочатся" FontSize="30"  FontWeight="Bold" Foreground="#3D0600"></Label>
-                <ListView x:Name="view4"  FontSize="15" Width="350"  Background="#FFBEB8" BorderThickness="3" BorderBrush="#173D00">
+                <ListView x:Name="view3" FontSize="18" Width="350"  Background="#FFBEB8" BorderThickness="3" BorderBrush="#173D00">
                     <ListView.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
@@ -145,7 +145,7 @@
             </StackPanel>
             <StackPanel Orientation="Vertical" Margin="5,0" >
                 <Label Content="Просроченные задачи" FontSize="30"  FontWeight="Bold" Foreground="#3D0600"></Label>
-                <ListView x:Name="view3"  FontSize="15" Width="350"  Background="#FFBEB8" BorderThickness="3" BorderBrush="#173D00">
+                <ListView x:Name="view4" FontSize="18" Width="350"  Background="#FFBEB8" BorderThickness="3" BorderBrush="#173D00">
                     <ListView.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
@@ -181,7 +181,7 @@
             </StackPanel>
             <StackPanel Orientation="Vertical" Margin="5,0" >
                 <Label Content="Завершенные задачи" FontSize="30"  FontWeight="Bold" Foreground="#173D00"></Label>
-                <ListView x:Name="view5" FontSize="15" Width="350"  Background="#acf09a" BorderThickness="3" BorderBrush="#173D00">
+                <ListView x:Name="view5" FontSize="18" Width="350"  Background="#acf09a" BorderThickness="3" BorderBrush="#173D00">
                     <ListView.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>

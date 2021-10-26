@@ -17,7 +17,7 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition Width="125"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
@@ -25,35 +25,74 @@
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    
                 </Grid.RowDefinitions>
                 <Label FontSize="20" Grid.Row="0" Grid.Column="0" Content="Регистрация" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" ></Label>
-                <Label FontSize="20" Grid.Row="1" Grid.Column="0" Content="Логин"></Label>
-                <Label FontSize="20" Grid.Row="2" Grid.Column="0" Content="Пароль"></Label>
-                <Label FontSize="20" Grid.Row="3" Grid.Column="0" Content="Повторите пароль"></Label>
-                <TextBox  Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" Margin="0,0,-26,0">
+                <Label FontSize="20" Grid.Row="1" Grid.Column="0" Content="Имя"></Label>
+                <Label FontSize="20" Grid.Row="2" Grid.Column="0" Content="Фамилия"></Label>
+                <Label FontSize="20" Grid.Row="3" Grid.Column="0" Content="Пол"></Label>
+                <Label FontSize="20" Grid.Row="4" Grid.Column="0" Content="Дата рождения"></Label>
+                <Label FontSize="20" Grid.Row="8" Grid.Column="0" Content="Повторите пароль"></Label>
+                
+                <Label FontSize="20" Grid.Row="5" Grid.Column="0" Content="Логин"></Label>
+                <Label FontSize="20" Grid.Row="7" Grid.Column="0" Content="Пароль"></Label>
+                
+                <TextBox x:Name="surname" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" TextChanged="TextBox_TextChanged">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <TextBox Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" Margin="0,0,-26,0">
+                <ComboBox x:Name="sex" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2">
+                    <ComboBox.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </ComboBox.Resources>
+                </ComboBox>
+                <TextBox x:Name="log" Grid.Row="5" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2"  TextChanged="TextBox_TextChanged_1">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <TextBox  Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" Margin="0,0,-26,0">
+                <DatePicker x:Name="dr" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></DatePicker>
+                <TextBox x:Name="pas" Grid.Row="7" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2"  TextChanged="TextBox_TextChanged_1">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <StackPanel Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Vertical" HorizontalAlignment="Center"  >
-                    <Button VerticalContentAlignment="Center" FontSize="20" Content="Зарегистрироваться" Margin="0,5" Background="#acf09a" BorderThickness="3" BorderBrush="Black" Height="52" Width="205">
-                        
+                <TextBox Grid.Row="8" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2"  TextChanged="TextBox_TextChanged_1">
+                    <TextBox.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <TextBox x:Name="name"  Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" TextChanged="TextBox_TextChanged_2">
+                    <TextBox.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <StackPanel Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Vertical" HorizontalAlignment="Center"  >
+                    <Button VerticalContentAlignment="Center" FontSize="20" Content="Зарегистрироваться" Margin="0,5" Background="#acf09a" BorderThickness="3" BorderBrush="Black" Height="52" Width="205" Click="Button_Click">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"></Setter>
+                            </Style>
+                        </Button.Resources>
                        
                     </Button>
 

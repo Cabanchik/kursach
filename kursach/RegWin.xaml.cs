@@ -22,7 +22,43 @@ namespace kursach
         public RegWin()
         {
             InitializeComponent();
-            
+            var genda = App.napominatel.gender.Select(g => g.title).ToList();
+            sex.ItemsSource = genda;
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged_2(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string sexx = sex.SelectedItem.ToString();
+            gender g = App.napominatel.gender.Where(s => s.title == "М").FirstOrDefault();
+            user user = new user()
+            {
+                name = name.Text.ToString(),
+                surname = surname.Text.ToString(),
+                gender_id = g.gender_id,
+                login = log.Text.ToString(),
+                password = pas.Text.ToString(),
+                birth_date = dr.SelectedDate
+
+            };
+            App.napominatel.user.Add(user);
+            App.napominatel.SaveChanges();
+            MessageBox.Show("РЕГИСТРАЦИЯ ПРОШЛА УСПЕШНО");
+            this.Close();
         }
     }
 }
