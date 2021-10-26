@@ -36,7 +36,7 @@
             <StackPanel Orientation="Vertical" >
                 <Label Content="Начатые задачи" FontSize="30"  FontWeight="Bold" Foreground="#173D00"></Label>
                 
-                <ListView x:Name="view2" FontSize="15" Width="350"  Background="#FFFAAD" BorderThickness="3" BorderBrush="#173D00">
+                <ListView x:Name="view2" FontSize="18" Width="350"  Background="#FFFAAD" BorderThickness="3" BorderBrush="#173D00">
                     <ListView.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
@@ -47,10 +47,25 @@
                     
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Orientation="Horizontal">
-                                <Label Content="{Binding title}"></Label>
-                                <Button Content="Удалить"></Button>
-                            </StackPanel>
+                            <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="175"></ColumnDefinition>
+                                    <ColumnDefinition Width="155"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Content="{Binding title}" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"></Label>
+
+                                <Button Background="#FF8080" FontWeight="Bold" BorderThickness="3" Click="Button_Click" Foreground="#A80A00"  BorderBrush="#A80A00" Content="Удалить" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                    <Button.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="10"></Setter>
+
+                                        </Style>
+                                    </Button.Resources>
+                                </Button>
+                            </Grid>
                             
                         </DataTemplate>
                     </ListView.ItemTemplate>
@@ -68,7 +83,26 @@
                     </ListView.Resources>
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <Label Content="{Binding title}"></Label>
+                            <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="175"></ColumnDefinition>
+                                    <ColumnDefinition Width="155"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Content="{Binding title}" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"></Label>
+
+                                <Button Background="#FF8080" FontWeight="Bold" BorderThickness="3" Foreground="#A80A00"  BorderBrush="#A80A00" Content="Удалить" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Click="Button_Click">
+                                    <Button.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="10"></Setter>
+
+                                        </Style>
+                                    </Button.Resources>
+                                </Button>
+                            </Grid>
+
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
@@ -85,7 +119,26 @@
                     </ListView.Resources>
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <Label Content="{Binding title}"></Label>
+                            <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="175"></ColumnDefinition>
+                                    <ColumnDefinition Width="155"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Content="{Binding title}" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"></Label>
+
+                                <Button Click="Button_Click" Background="#FF8080" FontWeight="Bold" BorderThickness="3" Foreground="#A80A00"  BorderBrush="#A80A00" Content="Удалить" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                    <Button.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="10"></Setter>
+
+                                        </Style>
+                                    </Button.Resources>
+                                </Button>
+                            </Grid>
+
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
@@ -102,7 +155,26 @@
                     </ListView.Resources>
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <Label Content="{Binding title}"></Label>
+                            <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="175"></ColumnDefinition>
+                                    <ColumnDefinition Width="155"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Content="{Binding title}" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"></Label>
+
+                                <Button Click="Button_Click" Background="#FF8080" FontWeight="Bold" BorderThickness="3" Foreground="#A80A00"  BorderBrush="#A80A00" Content="Удалить" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                    <Button.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="10"></Setter>
+
+                                        </Style>
+                                    </Button.Resources>
+                                </Button>
+                            </Grid>
+
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
@@ -119,7 +191,26 @@
                     </ListView.Resources>
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <Label Content="{Binding title}"></Label>
+                            <Grid >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="175"></ColumnDefinition>
+                                    <ColumnDefinition Width="155"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Label Content="{Binding title}" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"></Label>
+
+                                <Button Click="Button_Click" Background="#FF8080" FontWeight="Bold" BorderThickness="3" Foreground="#A80A00"  BorderBrush="#A80A00" Content="Удалить" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                    <Button.Resources>
+                                        <Style TargetType="Border">
+                                            <Setter Property="CornerRadius" Value="10"></Setter>
+
+                                        </Style>
+                                    </Button.Resources>
+                                </Button>
+                            </Grid>
+
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>

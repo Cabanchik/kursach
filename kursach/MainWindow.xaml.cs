@@ -25,11 +25,13 @@ namespace kursach
         {
             InitializeComponent();
             user1 = user2;
+            TimeSpan timeSpan = DateTime.Now - App.napominatel.ts
             view.ItemsSource = App.napominatel.task.Where(t=> t.user_id == user1.user_id && t.status_id == 2).ToList();
             view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
-            view3.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id).ToList();
-            view4.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id).ToList();
-            view5.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id).ToList();
+            view3.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id &&  ).ToList();
+            view4.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
+            view5.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
+            
         }
 
         
@@ -42,6 +44,24 @@ namespace kursach
             view.UpdateLayout();
             view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();
             view2.UpdateLayout();
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var message = MessageBox.Show("Are you sure ?", "Alarm", MessageBoxButton.OKCancel);
+            if (message == MessageBoxResult.OK)
+            {
+                Button delete = sender as Button;
+                task deltask = delete.DataContext as task;
+                    App.napominatel.task.Remove(deltask);
+                App.napominatel.SaveChanges();
+            }
+            view.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
+            view.UpdateLayout();
+            view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();
+            view2.UpdateLayout();
+
 
         }
     }

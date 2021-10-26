@@ -50,7 +50,7 @@ namespace kursach
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            var user = App.napominatel.user.Where(u => u.login == log.Text && u.password == pas.Text).FirstOrDefault();
+                var user = App.napominatel.user.Where(u => u.login == log.Text && u.password == pas.Text).FirstOrDefault();
             if (user != null)
             {
                 
