@@ -50,13 +50,23 @@
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <ComboBox x:Name="sex" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2">
-                    <ComboBox.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="10"></Setter>
-                        </Style>
-                    </ComboBox.Resources>
-                </ComboBox>
+                <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
+                    <CheckBox Content="М" FontSize="20" x:Name="sex" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" Checked="sex_Checked">
+                        <CheckBox.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"></Setter>
+                            </Style>
+                        </CheckBox.Resources>
+                    </CheckBox>
+                    <CheckBox Content="Ж" FontSize="20" x:Name="sex2"  VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" Checked="sex_Checked">
+                        <CheckBox.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"></Setter>
+                            </Style>
+                        </CheckBox.Resources>
+                    </CheckBox>
+                </StackPanel>
+                
                 <TextBox x:Name="log" Grid.Row="5" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2"  TextChanged="TextBox_TextChanged_1">
                     <TextBox.Resources>
                         <Style TargetType="Border">

@@ -23,7 +23,7 @@ namespace kursach
         {
             InitializeComponent();
             var genda = App.napominatel.gender.Select(g => g.title).ToList();
-            sex.ItemsSource = genda;
+            
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -43,13 +43,22 @@ namespace kursach
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string sexx = sex.SelectedItem.ToString();
-            gender g = App.napominatel.gender.Where(s => s.title == "М").FirstOrDefault();
+            int ass = 0;
+            if (sex2.IsChecked == true)
+            {
+               ass = 2;
+            }
+            else if (sex.IsChecked == true)
+            {
+                ass = 1;
+            }
+           
+            
             user user = new user()
             {
                 name = name.Text.ToString(),
                 surname = surname.Text.ToString(),
-                gender_id = g.gender_id,
+                gender_id = ass,
                 login = log.Text.ToString(),
                 password = pas.Text.ToString(),
                 birth_date = dr.SelectedDate
@@ -59,6 +68,18 @@ namespace kursach
             App.napominatel.SaveChanges();
             MessageBox.Show("РЕГИСТРАЦИЯ ПРОШЛА УСПЕШНО");
             this.Close();
+        }
+
+        private void sex_Checked(object sender, RoutedEventArgs e)
+        {
+            if (sex.IsChecked == true)
+            {
+                sex2.IsChecked = false;
+            }
+            else if (sex2.IsChecked == true)
+            {
+                sex.IsChecked = false;
+            }
         }
     }
 }
