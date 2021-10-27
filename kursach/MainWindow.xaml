@@ -11,9 +11,9 @@
             <RowDefinition Height="80" ></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <StackPanel Background="Aqua" Grid.Row="0" Orientation="Horizontal">
+        <Grid Background="Aqua" Grid.Row="0" >
             
-            <Button Background="#acf09a" Width="160" Height="50" BorderThickness="3" BorderBrush="Black" Content="Создать задачу" Margin="10,0,0,0" FontSize="20" Click="Button_Click_1">
+            <Button HorizontalAlignment="Left" Background="#acf09a" Width="160" Height="50" BorderThickness="3" BorderBrush="Black" Content="Создать задачу" Margin="10,0,0,0" FontSize="20" Click="Button_Click_1">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10"></Setter>
@@ -22,16 +22,27 @@
                      
                 </Button.Resources>
             </Button>
-            <Button Background="#acf09a" Width="150" Height="50" BorderThickness="3" BorderBrush="Black" Content="Войти" Margin="10,0,0,0" FontSize="20" Click="Button_Click_1">
+            <StackPanel Orientation="Horizontal" Background="Wheat" HorizontalAlignment="Right">
+                <StackPanel  Orientation="Vertical" VerticalAlignment="Center">
+                    <Label FontSize="20" FontWeight="Bold" Content="{Binding name}"></Label>
+                    <Label FontSize="20" FontWeight="Bold" Content="{Binding surname}"></Label>
+                </StackPanel>
+                <Ellipse Width="80" Height="80">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="{Binding user_pic, TargetNullValue={StaticResource nigger}}" />
+                    </Ellipse.Fill>
+                </Ellipse>
+            </StackPanel>
+            <!--<Button Background="#acf09a" Width="150" Height="50" BorderThickness="3" BorderBrush="Black" Content="Войти" Margin="10,0,0,0" FontSize="20" Click="Button_Click_1">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10"></Setter>
 
                     </Style>
                 </Button.Resources>
-            </Button>
+            </Button>-->
 
-        </StackPanel>
+        </Grid>
         <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="5,0">
             <StackPanel Orientation="Vertical" >
                 <Label Content="Начатые задачи" FontSize="30"  FontWeight="Bold" Foreground="#173D00"></Label>

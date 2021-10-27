@@ -26,6 +26,7 @@ namespace kursach
         {
             InitializeComponent();
             user1 = user2;
+            this.DataContext = user1;
             DateTime sosi = DateTime.Now.AddDays(2);
             view.ItemsSource = App.napominatel.task.Where(t=> t.user_id == user1.user_id && t.status_id == 2).ToList();
             view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();

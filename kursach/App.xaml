@@ -4,6 +4,8 @@
              xmlns:local="clr-namespace:kursach"
              StartupUri="LogWin.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <BitmapImage x:Key="nigger" UriSource="../resoursess/anon.jpg"></BitmapImage>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
