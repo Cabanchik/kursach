@@ -84,5 +84,10 @@ namespace kursach
 
 
         }
+
+        private void StackPanel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+           
+        }
     }
 }

@@ -6,6 +6,8 @@
     <Application.Resources>
         <ResourceDictionary>
             <BitmapImage x:Key="nigger" UriSource="../resoursess/anon.jpg"></BitmapImage>
+            <FontFamily x:Key="yakuza" >resoursess/edosz.ttf</FontFamily>
         </ResourceDictionary>
     </Application.Resources>
+    
 </Application>
