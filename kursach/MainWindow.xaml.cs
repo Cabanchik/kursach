@@ -70,7 +70,7 @@ namespace kursach
                 App.napominatel.task.Remove(deltask);
                 App.napominatel.SaveChanges();
             }
-            DateTime sosi = DateTime.Now.AddDays(2);
+            DateTime sosi = DateTime.Now.AddDays(1);
             view.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();
             view.UpdateLayout();
             view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
@@ -88,6 +88,22 @@ namespace kursach
         private void StackPanel_MouseDown(object sender, MouseButtonEventArgs e)
         {
            
+        }
+
+        
+
+        private void view_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var task123 = (sender as ListView).SelectedItem as task;
+            
+            EditTask editTask = new EditTask(task123);
+            editTask.Show();
+
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("nigger");
         }
     }
 }
