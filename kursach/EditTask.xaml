@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kursach"
         mc:Ignorable="d"
-        Title="EditTask" Height="300" Width="500" WindowStyle="None" AllowsTransparency="True" Background="White">
+        Title="EditTask" Height="300" Width="500" WindowStyle="None" AllowsTransparency="True" Background="#acf09a">
 
     <Window.Template>
         <ControlTemplate>
 
-            <Border CornerRadius="100" BorderThickness="5" Background="White" BorderBrush="Green">
+            <Border BorderThickness="5" CornerRadius="100"  Background="#acf09a" BorderBrush="#173D00">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
@@ -22,7 +22,7 @@
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="100"></ColumnDefinition>
+                            <ColumnDefinition Width="130"></ColumnDefinition>
                             <ColumnDefinition Width="200"></ColumnDefinition>
 
                         </Grid.ColumnDefinitions>
@@ -34,19 +34,19 @@
                             <RowDefinition></RowDefinition>
                             <RowDefinition></RowDefinition>
                         </Grid.RowDefinitions>
-                        <TextBlock Text="Название:" Grid.Column="0" Grid.Row="0"></TextBlock>
-                        <TextBlock Grid.Column="1" Grid.Row="0" Text="{Binding title}" ></TextBlock>
-                        <TextBlock Text="Дата создания:" Grid.Column="0" Grid.Row="1"></TextBlock>
-                        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding purpose_time}"></TextBlock>
-                        <TextBlock Text="Дата окончания:" Grid.Column="0" Grid.Row="2"></TextBlock>
-                        <TextBlock Grid.Column="1" Grid.Row="2" Text="{Binding end_time}"></TextBlock>
-                        <TextBlock Text="Аннотация:" Grid.Column="0" Grid.Row="3"></TextBlock>
-                        <TextBlock Grid.Column="1" Grid.Row="3" Text="{Binding annotation}" TextWrapping="Wrap"></TextBlock>
-                        
+                        <TextBlock FontWeight="SemiBold" FontSize="15" Text="Название:" Grid.Column="0" Grid.Row="0"></TextBlock>
+                        <TextBlock FontWeight="SemiBold" FontSize="15" Grid.Column="1" Grid.Row="0" Text="{Binding title}" ></TextBlock>
+                        <TextBlock FontWeight="DemiBold" FontSize="15" Text="Дата создания:" Grid.Column="0" Grid.Row="1"></TextBlock>
+                        <TextBlock FontWeight="DemiBold" FontSize="15" Grid.Column="1" Grid.Row="1" Text="{Binding purpose_time}"></TextBlock>
+                        <TextBlock FontWeight="SemiBold" FontSize="15" Text="Дата окончания:" Grid.Column="0" Grid.Row="2"></TextBlock>
+                        <TextBlock FontWeight="SemiBold" FontSize="15" Grid.Column="1" Grid.Row="2" Text="{Binding end_time}"></TextBlock>
+                        <TextBlock FontWeight="SemiBold" FontSize="15" Text="Аннотация:" Grid.Column="0" Grid.Row="3"></TextBlock>
+                        <TextBlock FontWeight="SemiBold" FontSize="15" Grid.Column="1" Grid.Row="3" Text="{Binding annotation}" TextWrapping="Wrap"></TextBlock>
+
 
                     </Grid>
-                    <Button Click="Button_Click" Content="X" HorizontalAlignment="Left" Margin="422,29,0,0" VerticalAlignment="Top" Width="20" Height="20"/>
-                    
+                    <Button Click="Button_Click" Content="X" HorizontalAlignment="Left" Margin="422,29,0,0" VerticalAlignment="Top" Width="15" Height="19"/>
+
                 </Grid>
             </Border>
 

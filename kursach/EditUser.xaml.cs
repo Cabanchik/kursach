@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace kursach
 {
     /// <summary>
-    /// Логика взаимодействия для EditWin.xaml
+    /// Логика взаимодействия для EditUser.xaml
     /// </summary>
-    public partial class EditWin : Window
+    public partial class EditUser : Window
     {
-        public EditWin()
+        public EditUser()
         {
             InitializeComponent();
         }

@@ -11,7 +11,7 @@
             <RowDefinition Height="80" ></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid Background="Aqua" Grid.Row="0" >
+        <Grid Background="#2AC200" Grid.Row="0" >
             
             <Button HorizontalAlignment="Left" Background="#acf09a" Width="160" Height="50" BorderThickness="3" BorderBrush="Black" Content="Создать задачу" Margin="10,0,0,0" FontSize="20" Click="Button_Click_1">
                 <Button.Resources>
@@ -209,14 +209,14 @@
                                     <RowDefinition></RowDefinition>
                                 </Grid.RowDefinitions>
                                 <TextBlock TextWrapping="Wrap" Text="{Binding title}" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"></TextBlock>
-                                <Button Background="#acf09a" FontWeight="Bold" BorderThickness="3" Click="Button_Click_2" Foreground="#A80A00"  BorderBrush="#A80A00" Content="Завершить" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                <!--<Button Background="#acf09a" FontWeight="Bold" BorderThickness="3" Click="Button_Click_2" Foreground="#A80A00"  BorderBrush="#A80A00" Content="Завершить" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
                                     <Button.Resources>
                                         <Style TargetType="Border">
                                             <Setter Property="CornerRadius" Value="10"></Setter>
 
                                         </Style>
                                     </Button.Resources>
-                                </Button>
+                                </Button>-->
 
                                 <Button Background="#FF8080" FontWeight="Bold" BorderThickness="3" Click="Button_Click" Foreground="#A80A00"  BorderBrush="#A80A00" Content="Удалить" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right">
                                     <Button.Resources>
@@ -256,14 +256,14 @@
                                     <RowDefinition></RowDefinition>
                                 </Grid.RowDefinitions>
                                 <TextBlock TextWrapping="Wrap" Text="{Binding title}" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"></TextBlock>
-                                <Button Background="#acf09a" FontWeight="Bold" BorderThickness="3" Click="Button_Click_2" Foreground="#173D00"  BorderBrush="#173D00" Content="Завершить" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                <!--<Button Background="#acf09a" FontWeight="Bold" BorderThickness="3" Click="Button_Click_2" Foreground="#173D00"  BorderBrush="#173D00" Content="Завершить" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
                                     <Button.Resources>
                                         <Style TargetType="Border">
                                             <Setter Property="CornerRadius" Value="10"></Setter>
 
                                         </Style>
                                     </Button.Resources>
-                                </Button>
+                                </Button>-->
 
                                 <Button Background="#FF8080" FontWeight="Bold" BorderThickness="3" Click="Button_Click" Foreground="#A80A00"  BorderBrush="#A80A00" Content="Удалить" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right">
                                     <Button.Resources>

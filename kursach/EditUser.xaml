@@ -1,0 +1,106 @@
+﻿<Window x:Class="kursach.EditUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:kursach"
+        mc:Ignorable="d"
+        Title="EditUser" Height="450" Width="515.508" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Ellipse Width="200" Height="200">
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="{Binding user_pic, TargetNullValue={StaticResource nigger}}" />
+                </Ellipse.Fill>
+            </Ellipse>
+            <Grid Width="302" VerticalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    
+                    
+                </Grid.RowDefinitions>
+                <Label FontSize="20" Grid.Row="0" Grid.Column="0" Content="Регистрация" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" ></Label>
+                <Label FontSize="20" Grid.Row="1" Grid.Column="0" Content="Имя"></Label>
+                <Label FontSize="20" Grid.Row="2" Grid.Column="0" Content="Фамилия"></Label>
+                <Label FontSize="20" Grid.Row="3" Grid.Column="0" Content="Пол"></Label>
+                <Label FontSize="20" Grid.Row="4" Grid.Column="0" Content="Дата рождения"></Label>
+                <TextBlock FontSize="20" Grid.Row="7" Grid.Column="0" TextWrapping="Wrap" Text="Повторите пароль"></TextBlock>
+
+                <Label FontSize="20" Grid.Row="5" Grid.Column="0" Content="Логин"></Label>
+                <Label FontSize="20" Grid.Row="6" Grid.Column="0" Content="Пароль"></Label>
+
+                <TextBox x:Name="surname" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" TextChanged="TextBox_TextChanged">
+                    <TextBox.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
+                    <CheckBox Content="М" FontSize="20" x:Name="sex" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" Checked="sex_Checked">
+                        <CheckBox.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"></Setter>
+                            </Style>
+                        </CheckBox.Resources>
+                    </CheckBox>
+                    <CheckBox Content="Ж" FontSize="20" x:Name="sex2"  VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" Checked="sex_Checked">
+                        <CheckBox.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="10"></Setter>
+                            </Style>
+                        </CheckBox.Resources>
+                    </CheckBox>
+                </StackPanel>
+
+                <TextBox x:Name="log" Grid.Row="5" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2"  TextChanged="TextBox_TextChanged_1">
+                    <TextBox.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <DatePicker x:Name="dr" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></DatePicker>
+                <TextBox x:Name="pas" Grid.Row="6" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2"  TextChanged="TextBox_TextChanged_1">
+                    <TextBox.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <TextBox Grid.Row="7" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2"  TextChanged="TextBox_TextChanged_1">
+                    <TextBox.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+                <TextBox x:Name="name"  Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" TextChanged="TextBox_TextChanged_2">
+                    <TextBox.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </TextBox.Resources>
+                </TextBox>
+            </Grid>
+        </StackPanel>
+        
+    </Grid>
+</Window>
