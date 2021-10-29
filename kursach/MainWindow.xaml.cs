@@ -96,7 +96,7 @@ namespace kursach
 
         private void StackPanel_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            EditUser editUser = new EditUser();
+            EditUser editUser = new EditUser(user1);
             editUser.ShowDialog();
         }
 

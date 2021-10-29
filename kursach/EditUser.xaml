@@ -5,8 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kursach"
         mc:Ignorable="d"
-        Title="EditUser" Height="450" Width="515.508" >
-    <Grid>
+        Title="EditUser" Height="499.332" Width="538.369" AllowsTransparency="True" WindowStyle="None" Background="Transparent" >
+    <Border CornerRadius="50" BorderThickness="3" BorderBrush="AliceBlue" Background="#dfffc8">
+        <Grid Background="#dfffc8" HorizontalAlignment="Center" VerticalAlignment="Center"> 
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
@@ -14,17 +15,29 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
-            <Ellipse Width="200" Height="200">
-                <Ellipse.Fill>
-                    <ImageBrush ImageSource="{Binding user_pic, TargetNullValue={StaticResource nigger}}" />
-                </Ellipse.Fill>
-            </Ellipse>
+            <StackPanel Orientation="Vertical" VerticalAlignment="Center" Margin="0,0,10,0">
+                    <TextBlock HorizontalAlignment="Center" Text="Перенесите желаемую картинку"></TextBlock>
+                <Ellipse x:Name="pic" Width="200" Height="200" AllowDrop="False" Drop="Ellipse_Drop">
+                    <Ellipse.Fill>
+                        <ImageBrush x:Name="dicpic" ImageSource="{Binding user_pic, TargetNullValue={StaticResource nigger}}" />
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Button Visibility="Collapsed" x:Name="edit" Content="Изменить" Grid.Column="0" Margin="0,5,0,0">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+            
             <Grid Width="302" VerticalAlignment="Center">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
@@ -46,7 +59,7 @@
                 <Label FontSize="20" Grid.Row="5" Grid.Column="0" Content="Логин"></Label>
                 <Label FontSize="20" Grid.Row="6" Grid.Column="0" Content="Пароль"></Label>
 
-                <TextBox x:Name="surname" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" TextChanged="TextBox_TextChanged">
+                    <TextBox IsReadOnly="True" x:Name="surname" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
@@ -54,14 +67,14 @@
                     </TextBox.Resources>
                 </TextBox>
                 <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
-                    <CheckBox Content="М" FontSize="20" x:Name="sex" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" Checked="sex_Checked">
+                        <CheckBox IsEnabled="False" Content="М" FontSize="20" x:Name="sex" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" Checked="sex_Checked">
                         <CheckBox.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="10"></Setter>
                             </Style>
                         </CheckBox.Resources>
                     </CheckBox>
-                    <CheckBox Content="Ж" FontSize="20" x:Name="sex2"  VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" Checked="sex_Checked">
+                        <CheckBox IsEnabled="False" Content="Ж" FontSize="20" x:Name="sex2"  VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" Checked="sex_Checked">
                         <CheckBox.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="10"></Setter>
@@ -70,37 +83,52 @@
                     </CheckBox>
                 </StackPanel>
 
-                <TextBox x:Name="log" Grid.Row="5" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2"  TextChanged="TextBox_TextChanged_1">
+                <TextBox IsReadOnly="True" x:Name="log" Grid.Row="5" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2"  >
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <DatePicker x:Name="dr" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></DatePicker>
-                <TextBox x:Name="pas" Grid.Row="6" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2"  TextChanged="TextBox_TextChanged_1">
+                <DatePicker IsEnabled="False" x:Name="dr" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></DatePicker>
+                <TextBox IsReadOnly="True" x:Name="pas" Grid.Row="6" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2"  >
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <TextBox Grid.Row="7" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2"  TextChanged="TextBox_TextChanged_1">
+                <TextBox Grid.Row="7" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" >
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <TextBox x:Name="name"  Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" TextChanged="TextBox_TextChanged_2">
+                <TextBox IsReadOnly="True" Text="{Binding name}" x:Name="name"  Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" >
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
+                    <Button Click="edit1_Click" Visibility="Collapsed" x:Name="sussy" Width="100" Grid.ColumnSpan="2" Content="Сохранить" Grid.Row="8" Grid.Column="0" Height="40" Margin="0,5,0,0">
+                    <Button.Resources> 
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+                <Button Visibility="Visible" x:Name="edit1" Width="100" Grid.ColumnSpan="2" Content="Изменить" Grid.Row="8" Grid.Column="0" Height="40" Margin="0,5,0,0" Click="edit1_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
             </Grid>
         </StackPanel>
         
-    </Grid>
+        </Grid>
+    </Border>
 </Window>
