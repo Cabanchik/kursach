@@ -45,7 +45,14 @@
 
 
                     </Grid>
-                    <Button Click="Button_Click" Content="X" HorizontalAlignment="Left" Margin="422,29,0,0" VerticalAlignment="Top" Width="15" Height="19"/>
+                    <Button Background="#237A00" Click="Button_Click" Content="X" HorizontalAlignment="Left" Margin="422,29,0,0" VerticalAlignment="Top" Width="15" Height="19">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="2"></Setter>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+
 
                 </Grid>
             </Border>

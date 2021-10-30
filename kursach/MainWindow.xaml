@@ -22,7 +22,7 @@
                      
                 </Button.Resources>
             </Button>
-            <StackPanel Orientation="Horizontal" Background="Wheat" HorizontalAlignment="Right" MouseDown="StackPanel_MouseDown">
+            <StackPanel Orientation="Horizontal" Background="#B2FF99" HorizontalAlignment="Right" MouseDown="StackPanel_MouseDown">
                 <StackPanel  Orientation="Vertical" VerticalAlignment="Center">
                     <Label FontSize="20" FontWeight="Bold" Content="{Binding name}" FontFamily="/kursach;component/resoursess/#Edo SZ" ></Label>
                     <Label FontSize="20" FontWeight="Bold" Content="{Binding surname}" FontFamily="/kursach;component/resoursess/#Edo SZ"></Label>

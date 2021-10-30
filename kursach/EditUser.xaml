@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:kursach"
         mc:Ignorable="d"
         Title="EditUser" Height="499.332" Width="538.369" AllowsTransparency="True" WindowStyle="None" Background="Transparent" >
-    <Border CornerRadius="50" BorderThickness="3" BorderBrush="AliceBlue" Background="#dfffc8">
-        <Grid Background="#dfffc8" HorizontalAlignment="Center" VerticalAlignment="Center">
+    <Border CornerRadius="50" BorderThickness="3" BorderBrush="#237A00" Background="#B2FF99">
+        <Grid Background="#B2FF99" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
@@ -22,7 +22,7 @@
                             <ImageBrush x:Name="dicpic" ImageSource="{Binding user_pic, TargetNullValue={StaticResource nigger}}" />
                         </Ellipse.Fill>
                     </Ellipse>
-                    
+
                 </StackPanel>
 
                 <Grid Width="302" VerticalAlignment="Center">
@@ -123,7 +123,13 @@
                     </Button>
                 </Grid>
             </StackPanel>
-            <Button VerticalContentAlignment="Center" Content="X" HorizontalAlignment="Left" Margin="478,-67,0,0" VerticalAlignment="Top" Width="20" Height="20" RenderTransformOrigin="0.961,-0.298" Click="Button_Click"/>
+            <Button Background="#237A00" Click="Button_Click" Content="X" HorizontalAlignment="Left" Margin="484,-71,0,0" VerticalAlignment="Top" Width="16" Height="21">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="2"></Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
 
         </Grid>
     </Border>
