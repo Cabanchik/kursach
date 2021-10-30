@@ -76,7 +76,12 @@ namespace kursach
             {
                 sex2.IsChecked = false;
             }
-            else if (sex2.IsChecked == true)
+            
+        }
+
+        private void sex2_Checked(object sender, RoutedEventArgs e)
+        {
+            if (sex2.IsChecked == true)
             {
                 sex.IsChecked = false;
             }

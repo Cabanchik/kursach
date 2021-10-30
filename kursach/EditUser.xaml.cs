@@ -25,6 +25,16 @@ namespace kursach
             InitializeComponent();
             user1 = user;
             this.DataContext = user1;
+            if (user1.gender_id == 1)
+            {
+                sex.IsChecked = true;
+                sex2.IsChecked = false;
+            }
+            else
+            {
+                sex.IsChecked = false;
+                sex2.IsChecked = true;
+            }
             
         }
 
@@ -35,7 +45,12 @@ namespace kursach
 
         private void sex_Checked(object sender, RoutedEventArgs e)
         {
-
+            if (sex.IsChecked == true)
+            {               
+                sex2.IsChecked = false;
+            }
+         
+            
         }
 
         private void Ellipse_Drop(object sender, DragEventArgs e)
@@ -62,17 +77,54 @@ namespace kursach
 
         private void edit1_Click(object sender, RoutedEventArgs e)
         {
-            if (edit1.Visibility == Visibility.Visible)
+            pic.AllowDrop = true;
+            edit1.Visibility = Visibility.Collapsed;
+            sussy.Visibility = Visibility.Visible;
+           
+            name.IsReadOnly = false;
+            surname.IsReadOnly = false;
+            sex.IsEnabled = true;
+            sex2.IsEnabled = true;
+            dr.IsEnabled = true;
+            log.IsReadOnly = false;
+            pas.IsReadOnly = false;
+            lbl.Visibility = Visibility.Visible;
+        }
+        private void sex2_Checked(object sender, RoutedEventArgs e)
+        {
+            if (sex2.IsChecked == true)
             {
-                edit1.Visibility = Visibility.Collapsed;
-                sussy.Visibility = Visibility.Visible;
-                edit.Visibility = Visibility.Visible;
+               
+                sex.IsChecked = false;
             }
-            else if (edit1.Visibility == Visibility.Collapsed)
-            {
-                edit1.Visibility = Visibility.Visible;
-                sussy.Visibility = Visibility.Collapsed;
-            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void sussy_Click(object sender, RoutedEventArgs e)
+        {
+            pic.AllowDrop = false;
+            edit1.Visibility = Visibility.Visible;
+            sussy.Visibility = Visibility.Collapsed;
+           
+            name.IsReadOnly = true;
+            surname.IsReadOnly = true;
+            sex.IsEnabled = false;
+            sex2.IsEnabled = false;
+            dr.IsEnabled = false;
+            log.IsReadOnly = true;
+            pas.IsReadOnly = true;
+            lbl.Visibility = Visibility.Collapsed;
+
+            user1.name = name.Text.ToString();
+            user1.surname = surname.Text.ToString();
+            user1.birth_date = Convert.ToDateTime(dr.SelectedDate);
+            user1.login = log.Text.ToString();
+            user1.password = pas.Text.ToString();
+            App.napominatel.SaveChanges();
         }
     }
 }
