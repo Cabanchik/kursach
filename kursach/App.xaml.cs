@@ -13,6 +13,6 @@ namespace kursach
     /// </summary>
     public partial class App : Application
     {
-        public static heroku_e7222c258ac0aa4Entities napominatel = new heroku_e7222c258ac0aa4Entities();
+        public static heroku_e7222c258ac0aa4Entities1 napominatel = new heroku_e7222c258ac0aa4Entities1();
     }
 }

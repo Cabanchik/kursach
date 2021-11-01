@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище napominatelModel" Provider="MySql.Data.MySqlClient" ProviderManifestToken="8.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="status123">
+          <Key>
+            <PropertyRef Name="status_id" />
+          </Key>
+          <Property Name="status_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="task123">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="title" Type="varchar" MaxLength="45" />
+          <Property Name="purpose_time" Type="datetime" Precision="0" />
+          <Property Name="start_time" Type="datetime" Precision="0" />
+          <Property Name="status_id" Type="int" />
+          <Property Name="annotation" Type="varchar" MaxLength="700" />
+          <Property Name="end_time" Type="datetime" Precision="0" />
+          <Property Name="user_id" Type="int" />
+        </EntityType>
+        <Association Name="supersus">
+          <End Role="status123" Type="Self.status123" Multiplicity="0..1" />
+          <End Role="task123" Type="Self.task123" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="status123">
+              <PropertyRef Name="status_id" />
+            </Principal>
+            <Dependent Role="task123">
+              <PropertyRef Name="status_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище napominatelModelContainer">
+          <EntitySet Name="status123" EntityType="Self.status123" Schema="napominatel" store:Type="Tables" />
+          <EntitySet Name="task123" EntityType="Self.task123" Schema="napominatel" store:Type="Tables" />
+          <AssociationSet Name="supersus" Association="Self.supersus">
+            <End Role="status123" EntitySet="status123" />
+            <End Role="task123" EntitySet="task123" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="napominatelModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="status123">
+          <Key>
+            <PropertyRef Name="status_id" />
+          </Key>
+          <Property Name="status_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="task123" Relationship="Self.supersus" FromRole="status123" ToRole="task123" />
+        </EntityType>
+        <EntityType Name="task123">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="title" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="purpose_time" Type="DateTime" />
+          <Property Name="start_time" Type="DateTime" />
+          <Property Name="status_id" Type="Int32" />
+          <Property Name="annotation" Type="String" MaxLength="700" FixedLength="false" Unicode="false" />
+          <Property Name="end_time" Type="DateTime" />
+          <Property Name="user_id" Type="Int32" />
+          <NavigationProperty Name="status123" Relationship="Self.supersus" FromRole="task123" ToRole="status123" />
+        </EntityType>
+        <Association Name="supersus">
+          <End Role="status123" Type="Self.status123" Multiplicity="0..1" />
+          <End Role="task123" Type="Self.task123" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="status123">
+              <PropertyRef Name="status_id" />
+            </Principal>
+            <Dependent Role="task123">
+              <PropertyRef Name="status_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="napominatelEntities2" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="status123" EntityType="Self.status123" />
+          <EntitySet Name="task123" EntityType="Self.task123" />
+          <AssociationSet Name="supersus" Association="Self.supersus">
+            <End Role="status123" EntitySet="status123" />
+            <End Role="task123" EntitySet="task123" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище napominatelModelContainer" CdmEntityContainer="napominatelEntities2">
+          <EntitySetMapping Name="status123">
+            <EntityTypeMapping TypeName="napominatelModel.status123">
+              <MappingFragment StoreEntitySet="status123">
+                <ScalarProperty Name="status_id" ColumnName="status_id" />
+                <ScalarProperty Name="title" ColumnName="title" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="task123">
+            <EntityTypeMapping TypeName="napominatelModel.task123">
+              <MappingFragment StoreEntitySet="task123">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="title" ColumnName="title" />
+                <ScalarProperty Name="purpose_time" ColumnName="purpose_time" />
+                <ScalarProperty Name="start_time" ColumnName="start_time" />
+                <ScalarProperty Name="status_id" ColumnName="status_id" />
+                <ScalarProperty Name="annotation" ColumnName="annotation" />
+                <ScalarProperty Name="end_time" ColumnName="end_time" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

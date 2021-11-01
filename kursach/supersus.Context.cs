@@ -13,10 +13,10 @@ namespace kursach
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class heroku_e7222c258ac0aa4Entities1 : DbContext
+    public partial class napominatelEntities2 : DbContext
     {
-        public heroku_e7222c258ac0aa4Entities1()
-            : base("name=heroku_e7222c258ac0aa4Entities1")
+        public napominatelEntities2()
+            : base("name=napominatelEntities2")
         {
         }
     
@@ -25,9 +25,7 @@ namespace kursach
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<gender> gender { get; set; }
-        public virtual DbSet<status> status { get; set; }
-        public virtual DbSet<task> task { get; set; }
-        public virtual DbSet<user> user { get; set; }
+        public virtual DbSet<status123> status123 { get; set; }
+        public virtual DbSet<task123> task123 { get; set; }
     }
 }

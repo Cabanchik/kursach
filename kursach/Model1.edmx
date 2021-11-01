@@ -186,7 +186,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="heroku_e7222c258ac0aa4Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="heroku_e7222c258ac0aa4Entities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="gender" EntityType="Self.gender" />
           <EntitySet Name="status" EntityType="Self.status" />
           <EntitySet Name="task" EntityType="Self.task" />
@@ -209,7 +209,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище heroku_e7222c258ac0aa4ModelContainer" CdmEntityContainer="heroku_e7222c258ac0aa4Entities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище heroku_e7222c258ac0aa4ModelContainer" CdmEntityContainer="heroku_e7222c258ac0aa4Entities1">
           <EntitySetMapping Name="gender">
             <EntityTypeMapping TypeName="heroku_e7222c258ac0aa4Model.gender">
               <MappingFragment StoreEntitySet="gender">

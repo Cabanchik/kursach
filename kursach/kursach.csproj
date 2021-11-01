@@ -143,8 +143,29 @@
     <Compile Include="status.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="status123.cs">
+      <DependentUpon>supersus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="supersus.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>supersus.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="supersus.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>supersus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="supersus.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>supersus.edmx</DependentUpon>
+    </Compile>
     <Compile Include="task.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="task123.cs">
+      <DependentUpon>supersus.tt</DependentUpon>
     </Compile>
     <Compile Include="TaskAdd.xaml.cs">
       <DependentUpon>TaskAdd.xaml</DependentUpon>
@@ -230,6 +251,13 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <EntityDeploy Include="supersus.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>supersus.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="supersus.edmx.diagram">
+      <DependentUpon>supersus.edmx</DependentUpon>
+    </None>
     <Resource Include="resoursess\edosz.ttf" />
   </ItemGroup>
   <ItemGroup>
@@ -240,16 +268,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Martz90-Circle-Clock.ico" />
-    <Content Include="Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
     <Resource Include="resoursess\Martz90-Circle-Clock.ico" />
     <Resource Include="resoursess\anon.jpg" />
   </ItemGroup>
@@ -265,7 +283,28 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="supersus.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>supersus.edmx</DependentUpon>
+      <LastGenOutput>supersus.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="supersus.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>supersus.edmx</DependentUpon>
+      <LastGenOutput>supersus.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
