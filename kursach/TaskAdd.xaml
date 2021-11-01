@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kursach"
         mc:Ignorable="d"
-        Title="TaskAdd" Height="450" Width="800">
+        Title="Добавление задачи" Height="450" Width="800">
     <Grid Background="#dfffc8">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
             <Grid>
@@ -67,7 +67,7 @@
                         </Button.Resources>
                     </Button>
 
-                    <TextBlock FontSize="15" Text="Нет аккаунта?" HorizontalAlignment="Center" ></TextBlock>
+                   
                    
                 </StackPanel>
 

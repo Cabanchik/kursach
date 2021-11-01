@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kursach"
         mc:Ignorable="d"
-        Title="RegWin" Height="400" Width="900" WindowStartupLocation="CenterScreen">
+        Title="Регистрация" Height="400" Width="900" WindowStartupLocation="CenterScreen">
     <Window.Resources>        
         <Style TargetType="Border" x:Key="sas">
             <Setter Property="CornerRadius" Value="10" ></Setter>

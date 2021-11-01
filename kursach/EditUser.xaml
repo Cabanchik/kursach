@@ -92,7 +92,7 @@
                         </TextBox.Resources>
                     </TextBox>
                     <DatePicker SelectedDate="{Binding birth_date}" IsEnabled="False" x:Name="dr" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></DatePicker>
-                    <TextBox Text="{Binding password}" IsReadOnly="True" x:Name="pas" Grid.Row="6" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2"  >
+                    <TextBox Text="***" IsReadOnly="True" x:Name="pas" Grid.Row="6" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2"  >
                         <TextBox.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="10"></Setter>

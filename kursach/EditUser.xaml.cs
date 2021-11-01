@@ -89,6 +89,7 @@ namespace kursach
             log.IsReadOnly = false;
             pas.IsReadOnly = false;
             lbl.Visibility = Visibility.Visible;
+            pas.Text = Convert.ToString(user1.password);
         }
         private void sex2_Checked(object sender, RoutedEventArgs e)
         {
@@ -125,6 +126,7 @@ namespace kursach
             user1.login = log.Text.ToString();
             user1.password = pas.Text.ToString();
             App.napominatel.SaveChanges();
+            pas.Text = "***";
         }
     }
 }
