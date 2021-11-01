@@ -34,29 +34,29 @@ namespace kursach
                 }
             }
             App.napominatel.SaveChanges();
-            view.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();
-            view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
-            view3.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
-            view4.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
-            view5.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
+            //view.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();
+            //view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
+            //view3.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
+            //view4.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
+            //view5.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
 
 
         }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            TaskAdd taskAdd = new TaskAdd(user1);
-            taskAdd.ShowDialog();
-            DateTime sosi = DateTime.Now.AddDays(1);
-            view.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();
-            view.UpdateLayout();
-            view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
-            view2.UpdateLayout();
-            view3.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
-            view3.UpdateLayout();
-            view4.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
-            view4.UpdateLayout();
-            view5.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
-            view5.UpdateLayout();
+            //TaskAdd taskAdd = new TaskAdd(user1);
+            //taskAdd.ShowDialog();
+            //DateTime sosi = DateTime.Now.AddDays(1);
+            //view.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();
+            //view.UpdateLayout();
+            //view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
+            //view2.UpdateLayout();
+            //view3.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
+            //view3.UpdateLayout();
+            //view4.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
+            //view4.UpdateLayout();
+            //view5.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
+            //view5.UpdateLayout();
 
         }
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -70,16 +70,16 @@ namespace kursach
                 App.napominatel.SaveChanges();
             }
             DateTime sosi = DateTime.Now.AddDays(1);
-            view.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();
-            view.UpdateLayout();
-            view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
-            view2.UpdateLayout();
-            view3.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
-            view3.UpdateLayout();
-            view4.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
-            view4.UpdateLayout();
-            view5.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
-            view5.UpdateLayout();
+            //view.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();
+            //view.UpdateLayout();
+            //view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
+            //view2.UpdateLayout();
+            //view3.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
+            //view3.UpdateLayout();
+            //view4.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
+            //view4.UpdateLayout();
+            //view5.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
+            //view5.UpdateLayout();
 
 
         }
@@ -102,11 +102,11 @@ namespace kursach
                 App.napominatel.SaveChanges();
             }
             DateTime sosi = DateTime.Now.AddDays(1);
-            view.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();
-            view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
-            view3.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
-            view4.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
-            view5.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
+            //view.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();
+            //view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
+            //view3.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
+            //view4.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
+            //view5.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
        
             view.UpdateLayout();
             view2.UpdateLayout();
