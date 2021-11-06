@@ -182,14 +182,14 @@
     <Compile Include="task123.cs">
       <DependentUpon>supersus.tt</DependentUpon>
     </Compile>
+    <Compile Include="offTaskAdd.xaml.cs">
+      <DependentUpon>offTaskAdd.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TaskAdd.xaml.cs">
       <DependentUpon>TaskAdd.xaml</DependentUpon>
     </Compile>
     <Compile Include="user.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Window1.xaml.cs">
-      <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
     <Page Include="EditTask.xaml">
       <SubType>Designer</SubType>
@@ -226,11 +226,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TaskAdd.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="offTaskAdd.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
-    <Page Include="Window1.xaml">
+    <Page Include="TaskAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

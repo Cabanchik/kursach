@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kursach"
         mc:Ignorable="d"
-        Title="Напоминатель" WindowState="Maximized" Height="768" Width="1366">
+        Title="Напоминатель" WindowState="Maximized" Height="768" Width="1971.415">
     <Grid Background="#dfffc8">
         <Grid.RowDefinitions>
             <RowDefinition Height="80" ></RowDefinition>

@@ -76,8 +76,18 @@ namespace kursach
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                App.napominatelOff.status123.Select(s => s);
+            }
+            catch (System.Data.Entity.Core.EntityException)
+            {
+
+                MessageBox.Show("Невозмонжо подключиться к базе");
+            }
             offMainWin offMainWin = new offMainWin();
             offMainWin.ShowDialog();
+            this.Close();
         }
     }
 }
