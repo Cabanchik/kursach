@@ -102,6 +102,10 @@ namespace kursach
                 MessageBox.Show("Дата должна быть заполнена в формате \"ГГГГ-ММ-ДД ЧЧ:мм:CC\"");
             }
         }
-        
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

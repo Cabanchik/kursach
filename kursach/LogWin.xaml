@@ -63,7 +63,7 @@
                             </Button.Resources>
                         </Button>
                         <TextBlock FontSize="15" HorizontalAlignment="Center" Text="или"></TextBlock>
-                        <Button Background="#acf09a" BorderThickness="3" BorderBrush="Black" FontSize="20"  Content="Войти как гость">
+                        <Button Background="#acf09a" BorderThickness="3" BorderBrush="Black" FontSize="20"  Content="Войти как гость" Click="Button_Click_2">
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="10"></Setter>

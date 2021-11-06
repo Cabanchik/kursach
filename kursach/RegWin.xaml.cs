@@ -52,8 +52,6 @@ namespace kursach
             {
                 ass = 1;
             }
-           
-            
             user user = new user()
             {
                 name = name.Text.ToString(),
@@ -64,10 +62,22 @@ namespace kursach
                 birth_date = dr.SelectedDate
 
             };
-            App.napominatel.user.Add(user);
-            App.napominatel.SaveChanges();
-            MessageBox.Show("РЕГИСТРАЦИЯ ПРОШЛА УСПЕШНО");
-            this.Close();
+            try
+            {
+                
+                App.napominatel.user.Add(user);
+                App.napominatel.SaveChanges();
+                MessageBox.Show("РЕГИСТРАЦИЯ ПРОШЛА УСПЕШНО");
+                this.Close();
+
+            }
+            catch (System.Data.Entity.Infrastructure.DbUpdateException)
+            {
+
+                MessageBox.Show("Данный логин уже занят");
+            }
+            
+            
         }
 
         private void sex_Checked(object sender, RoutedEventArgs e)

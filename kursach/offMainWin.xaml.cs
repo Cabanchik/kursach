@@ -26,25 +26,25 @@ namespace kursach
             
             
             DateTime sosi = DateTime.Now.AddDays(1);
-            foreach (var item in App.napominatel.task)
+            foreach (var item in App.napominatelOff.task123)
             {
                 if (item.end_time <= DateTime.Now)
                 {
                     item.status_id = 5;
                 }
             }
-            App.napominatel.SaveChanges();
-            //view.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();
-            //view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
-            //view3.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
-            //view4.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
-            //view5.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
+            //App.napominatelOff.SaveChanges();
+            view.ItemsSource = App.napominatelOff.task123.Where(t => t.status_id == 2).ToList();
+            view2.ItemsSource = App.napominatelOff.task123.Where(t =>  t.status_id == 1).ToList();
+            view3.ItemsSource = App.napominatelOff.task123.Where(t => t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
+            view4.ItemsSource = App.napominatelOff.task123.Where(t => t.status_id == 5).ToList();
+            view5.ItemsSource = App.napominatelOff.task123.Where(t => t.status_id == 3).ToList();
 
 
         }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            //TaskAdd taskAdd = new TaskAdd(user1);
+            //TaskAdd taskAdd = new TaskAdd();
             //taskAdd.ShowDialog();
             //DateTime sosi = DateTime.Now.AddDays(1);
             //view.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();

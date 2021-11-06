@@ -22,17 +22,24 @@
                      
                 </Button.Resources>
             </Button>
-            <StackPanel Orientation="Horizontal" Background="#B2FF99" HorizontalAlignment="Right" MouseDown="StackPanel_MouseDown">
-                <StackPanel  Orientation="Vertical" VerticalAlignment="Center">
-                    <Label FontSize="20" FontWeight="Bold" Content="{Binding name}" FontFamily="/kursach;component/resoursess/#Edo SZ" ></Label>
-                    <Label FontSize="20" FontWeight="Bold" Content="{Binding surname}" FontFamily="/kursach;component/resoursess/#Edo SZ"></Label>
-                </StackPanel>
-                <Ellipse Width="80" Height="80">
-                    <Ellipse.Fill>
-                        <ImageBrush ImageSource="{Binding user_pic, TargetNullValue={StaticResource nigger}}" />
-                    </Ellipse.Fill>
-                </Ellipse>
+           
+                <StackPanel Orientation="Horizontal" Background="Transparent" HorizontalAlignment="Right" MouseDown="StackPanel_MouseDown">
+                <Border CornerRadius="20" BorderThickness="3" Background="#acf09a">
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel  Orientation="Vertical" VerticalAlignment="Center">
+                            <Label FontSize="20" FontWeight="Bold" Content="{Binding name}" FontFamily="/kursach;component/resoursess/#Edo SZ" ></Label>
+                            <Label FontSize="20" FontWeight="Bold" Content="{Binding surname}" FontFamily="/kursach;component/resoursess/#Edo SZ"></Label>
+                        </StackPanel>
+                
+                        <Ellipse Width="80" Height="80">
+                                <Ellipse.Fill>
+                                    <ImageBrush ImageSource="{Binding user_pic, TargetNullValue={StaticResource nigger}}" />
+                                </Ellipse.Fill>
+                        </Ellipse>
+                    </StackPanel>
+                </Border>
             </StackPanel>
+            
             <!--<Button Background="#acf09a" Width="150" Height="50" BorderThickness="3" BorderBrush="Black" Content="Войти" Margin="10,0,0,0" FontSize="20" Click="Button_Click_1">
                 <Button.Resources>
                     <Style TargetType="Border">

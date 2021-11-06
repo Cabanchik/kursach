@@ -50,19 +50,34 @@ namespace kursach
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            try
+            {
                 var user = App.napominatel.user.Where(u => u.login == log.Text && u.password == pas.Text).FirstOrDefault();
-            if (user != null)
-            {
-                
-                MainWindow mainWindow = new MainWindow(user);
-                mainWindow.Show();
-                this.Close();
+                if (user != null)
+                {
+
+                    MainWindow mainWindow = new MainWindow(user);
+                    mainWindow.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Логин или пароль введен неверно!");
+                }
             }
-            else
+            catch (System.Data.Entity.Core.EntityException)
             {
-                MessageBox.Show("Логин или пароль введен неверно!");
+                MessageBox.Show("Отсутсвует интернет соединение");                
             }
             
+            
+            
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            offMainWin offMainWin = new offMainWin();
+            offMainWin.ShowDialog();
         }
     }
 }

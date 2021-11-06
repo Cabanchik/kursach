@@ -19,6 +19,7 @@ namespace kursach
     /// </summary>
     public partial class EditUser : Window
     {
+        
         public user user1 { get; set; }
         public EditUser(user user)
         {
@@ -35,6 +36,7 @@ namespace kursach
                 sex.IsChecked = false;
                 sex2.IsChecked = true;
             }
+            dr.Text = user1.birth_date.ToString();
             
         }
 
@@ -120,9 +122,18 @@ namespace kursach
             pas.IsReadOnly = true;
             lbl.Visibility = Visibility.Collapsed;
 
+            if (sex2.IsChecked == true)
+            {
+                user1.gender_id = 2;
+            }
+            else if (sex.IsChecked == true)
+            {
+                user1.gender_id = 1;
+
+            }
             user1.name = name.Text.ToString();
             user1.surname = surname.Text.ToString();
-            user1.birth_date = Convert.ToDateTime(dr.SelectedDate);
+            user1.birth_date = Convert.ToDateTime(dr.Text);
             user1.login = log.Text.ToString();
             user1.password = pas.Text.ToString();
             App.napominatel.SaveChanges();
