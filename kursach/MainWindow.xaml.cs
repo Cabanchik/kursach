@@ -36,12 +36,38 @@ namespace kursach
                 }
             }
             App.napominatel.SaveChanges();
-            view.ItemsSource = App.napominatel.task.Where(t=> t.user_id == user1.user_id && t.status_id == 2).ToList();
-            view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
-            view3.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
-            view4.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
-            view5.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
             
+            view.ItemsSource = App.napominatel.task.Where(t=> t.user_id == user1.user_id && t.status_id == 2).ToList();
+            if (view.Items.Count == 0)
+            {
+                view.Visibility = Visibility.Collapsed;
+                null1.Visibility = Visibility.Visible;
+            }
+            view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
+            if (view2.Items.Count == 0)
+            {
+                view2.Visibility = Visibility.Collapsed;
+                null2.Visibility = Visibility.Visible;
+            }
+            view3.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
+            if (view3.Items.Count == 0)
+            {
+                view3.Visibility = Visibility.Collapsed;
+                null3.Visibility = Visibility.Visible;
+            }
+            view4.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
+            if (view4.Items.Count == 0)
+            {
+                view4.Visibility = Visibility.Collapsed;
+                null4.Visibility = Visibility.Visible;
+            }
+            view5.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
+            if (view5.Items.Count == 0)
+            {
+                view5.Visibility = Visibility.Collapsed;
+                null5.Visibility = Visibility.Visible;
+            }
+
         }
 
         public static int DTime(DateTime date)
@@ -57,14 +83,39 @@ namespace kursach
             taskAdd.ShowDialog();
             DateTime sosi = DateTime.Now.AddDays(1);
             view.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();
-            view.UpdateLayout();
+            if (view.Items.Count == 0)
+            {
+                view.Visibility = Visibility.Collapsed;
+                null1.Visibility = Visibility.Visible;
+            }
             view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
-            view2.UpdateLayout();
+            if (view2.Items.Count == 0)
+            {
+                view2.Visibility = Visibility.Collapsed;
+                null2.Visibility = Visibility.Visible;
+            }
             view3.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
-            view3.UpdateLayout();
+            if (view3.Items.Count == 0)
+            {
+                view3.Visibility = Visibility.Collapsed;
+                null3.Visibility = Visibility.Visible;
+            }
             view4.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
-            view4.UpdateLayout();
+            if (view4.Items.Count == 0)
+            {
+                view4.Visibility = Visibility.Collapsed;
+                null4.Visibility = Visibility.Visible;
+            }
             view5.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
+            if (view5.Items.Count == 0)
+            {
+                view5.Visibility = Visibility.Collapsed;
+                null5.Visibility = Visibility.Visible;
+            }
+            view.UpdateLayout();
+            view2.UpdateLayout();
+            view3.UpdateLayout();
+            view4.UpdateLayout();
             view5.UpdateLayout();
 
         }
@@ -81,14 +132,39 @@ namespace kursach
             }
             DateTime sosi = DateTime.Now.AddDays(1);
             view.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();
-            view.UpdateLayout();
+            if (view.Items.Count == 0)
+            {
+                view.Visibility = Visibility.Collapsed;
+                null1.Visibility = Visibility.Visible;
+            }
             view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
-            view2.UpdateLayout();
+            if (view2.Items.Count == 0)
+            {
+                view2.Visibility = Visibility.Collapsed;
+                null2.Visibility = Visibility.Visible;
+            }
             view3.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
-            view3.UpdateLayout();
+            if (view3.Items.Count == 0)
+            {
+                view3.Visibility = Visibility.Collapsed;
+                null3.Visibility = Visibility.Visible;
+            }
             view4.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
-            view4.UpdateLayout();
+            if (view4.Items.Count == 0)
+            {
+                view4.Visibility = Visibility.Collapsed;
+                null4.Visibility = Visibility.Visible;
+            }
             view5.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
+            if (view5.Items.Count == 0)
+            {
+                view5.Visibility = Visibility.Collapsed;
+                null5.Visibility = Visibility.Visible;
+            }
+            view.UpdateLayout();
+            view2.UpdateLayout();
+            view3.UpdateLayout();
+            view4.UpdateLayout();
             view5.UpdateLayout();
 
 
@@ -123,14 +199,39 @@ namespace kursach
             }
             DateTime sosi = DateTime.Now.AddDays(1);
             view.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();
-            view.UpdateLayout();
+            if (view.Items.Count == 0)
+            {
+                view.Visibility = Visibility.Collapsed;
+                null1.Visibility = Visibility.Visible;
+            }
             view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
-            view2.UpdateLayout();
+            if (view2.Items.Count == 0)
+            {
+                view2.Visibility = Visibility.Collapsed;
+                null2.Visibility = Visibility.Visible;
+            }
             view3.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
-            view3.UpdateLayout();
+            if (view3.Items.Count == 0)
+            {
+                view3.Visibility = Visibility.Collapsed;
+                null3.Visibility = Visibility.Visible;
+            }
             view4.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
-            view4.UpdateLayout();
+            if (view4.Items.Count == 0)
+            {
+                view4.Visibility = Visibility.Collapsed;
+                null4.Visibility = Visibility.Visible;
+            }
             view5.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
+            if (view5.Items.Count == 0)
+            {
+                view5.Visibility = Visibility.Collapsed;
+                null5.Visibility = Visibility.Visible;
+            }
+            view.UpdateLayout();
+            view2.UpdateLayout();
+            view3.UpdateLayout();
+            view4.UpdateLayout();
             view5.UpdateLayout();
         }
     }

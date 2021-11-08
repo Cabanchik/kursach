@@ -48,7 +48,7 @@ namespace kursach
             }
             else if (Convert.ToDateTime(start.Text) <= DateTime.Now)
             {
-                stat = 2; 
+                stat = 2;
             }
             DateTime now = DateTime.Now;
             task task = new task()

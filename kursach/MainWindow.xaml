@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kursach"
         mc:Ignorable="d"
-        Title="Напоминатель" WindowState="Maximized" Height="768" Width="1366">
+        Title="Напоминатель" WindowState="Maximized" Height="768" Width="1865.5">
     <Grid Background="#dfffc8">
         <Grid.RowDefinitions>
             <RowDefinition Height="80" ></RowDefinition>
@@ -98,6 +98,7 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+                <TextBlock Visibility="Collapsed" Text="Задач нет!" FontWeight="Bold" FontSize="50" Name="null1" HorizontalAlignment="Center"></TextBlock>
             </StackPanel>
             <StackPanel Orientation="Vertical" Margin="5,0" >
                 <Label Content="Будующие задачи" FontSize="30"  FontWeight="Bold" Foreground="#173D00"></Label>
@@ -146,6 +147,7 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+                <TextBlock Visibility="Collapsed" Text="Задач нет!" FontWeight="Bold" FontSize="50" Name="null2" HorizontalAlignment="Center"></TextBlock>
                 
             </StackPanel>
             <StackPanel Orientation="Vertical" Margin="5,0" >
@@ -194,6 +196,7 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+                <TextBlock Visibility="Collapsed" Text="Задач нет!" FontWeight="Bold" FontSize="50" Name="null3" HorizontalAlignment="Center"></TextBlock>
             </StackPanel>
             <StackPanel Orientation="Vertical" Margin="5,0" >
                 <Label Content="Просроченные задачи" FontSize="30"  FontWeight="Bold" Foreground="#3D0600"></Label>
@@ -241,6 +244,7 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+                <TextBlock Visibility="Collapsed" Text="Задач нет!" FontWeight="Bold" FontSize="50" Name="null4" HorizontalAlignment="Center"></TextBlock>
             </StackPanel>
             <StackPanel Orientation="Vertical" Margin="5,0" >
                 <Label Content="Завершенные задачи" FontSize="30"  FontWeight="Bold" Foreground="#173D00"></Label>
@@ -288,6 +292,7 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+                <TextBlock Visibility="Collapsed" Text="Задач нет!" FontWeight="Bold" FontSize="50" Name="null5" HorizontalAlignment="Center"></TextBlock>
             </StackPanel>
         </StackPanel>
     </Grid>

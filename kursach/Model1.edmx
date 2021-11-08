@@ -82,10 +82,10 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="Хранилище heroku_e7222c258ac0aa4ModelContainer">
-          <EntitySet Name="gender" EntityType="Self.gender" Schema="heroku_e7222c258ac0aa4" store:Type="Tables" />
-          <EntitySet Name="status" EntityType="Self.status" Schema="heroku_e7222c258ac0aa4" store:Type="Tables" />
-          <EntitySet Name="task" EntityType="Self.task" Schema="heroku_e7222c258ac0aa4" store:Type="Tables" />
-          <EntitySet Name="user" EntityType="Self.user" Schema="heroku_e7222c258ac0aa4" store:Type="Tables" />
+          <EntitySet Name="gender" EntityType="Self.gender" Schema="" store:Type="Tables" />
+          <EntitySet Name="status" EntityType="Self.status" Schema="" store:Type="Tables" />
+          <EntitySet Name="task" EntityType="Self.task" Schema="" store:Type="Tables" />
+          <EntitySet Name="user" EntityType="Self.user" Schema="  " store:Type="Tables" />
           <AssociationSet Name="megasus" Association="Self.megasus">
             <End Role="user" EntitySet="user" />
             <End Role="task" EntitySet="task" />
