@@ -36,7 +36,7 @@ namespace kursach
                 sex.IsChecked = false;
                 sex2.IsChecked = true;
             }
-            dr.Text = user1.birth_date.ToString();
+           
             
         }
 
@@ -60,7 +60,7 @@ namespace kursach
             System.Drawing.Image ii;
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
-                // Note that you can have more than one file.
+                
                 string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
 
                 string fin = System.IO.Path.GetFullPath(files[0]);

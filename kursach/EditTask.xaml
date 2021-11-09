@@ -37,9 +37,9 @@
                         <TextBlock FontWeight="SemiBold" FontSize="15" Text="Название:" Grid.Column="0" Grid.Row="0"></TextBlock>
                         <TextBlock FontWeight="SemiBold" FontSize="15" Grid.Column="1" Grid.Row="0" Text="{Binding title}" ></TextBlock>
                         <TextBlock FontWeight="DemiBold" FontSize="15" Text="Дата создания:" Grid.Column="0" Grid.Row="1"></TextBlock>
-                        <TextBlock FontWeight="DemiBold" FontSize="15" Grid.Column="1" Grid.Row="1" Text="{Binding purpose_time}"></TextBlock>
+                        <TextBlock FontWeight="DemiBold" FontSize="15" Grid.Column="1" Grid.Row="1" Text="{Binding purpose_time, ConverterCulture=en-GB}"></TextBlock>
                         <TextBlock FontWeight="SemiBold" FontSize="15" Text="Дата окончания:" Grid.Column="0" Grid.Row="2"></TextBlock>
-                        <TextBlock FontWeight="SemiBold" FontSize="15" Grid.Column="1" Grid.Row="2" Text="{Binding end_time}"></TextBlock>
+                        <TextBlock FontWeight="SemiBold" FontSize="15" Grid.Column="1" Grid.Row="2" Text="{Binding end_time, ConverterCulture=en-GB}"></TextBlock>
                         <TextBlock FontWeight="SemiBold" FontSize="15" Text="Аннотация:" Grid.Column="0" Grid.Row="3"></TextBlock>
                         <TextBlock FontWeight="SemiBold" FontSize="15" Grid.Column="1" Grid.Row="3" Text="{Binding annotation}" TextWrapping="Wrap"></TextBlock>
 

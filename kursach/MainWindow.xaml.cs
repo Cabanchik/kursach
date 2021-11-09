@@ -30,7 +30,7 @@ namespace kursach
             DateTime sosi = DateTime.Now.AddDays(1);
             foreach (var item in App.napominatel.task)
             {
-                if (item.end_time <= DateTime.Now)
+                if (item.end_time <= DateTime.Now && item.status_id != 3)
                 {
                     item.status_id = 5;
                 }
