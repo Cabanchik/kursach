@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using kursach.Models;
 
 namespace kursach
 {
@@ -68,7 +69,7 @@ namespace kursach
                 dicpic.ImageSource = new BitmapImage(new Uri(fin));
                 ii = new System.Drawing.Bitmap(fin);
                 user1.user_pic = ImageToByte(ii);
-                App.napominatel.SaveChanges();
+                Connection.Connect1on.SaveChanges();
             }
         }
         public static byte[] ImageToByte(System.Drawing.Image image)
@@ -136,7 +137,7 @@ namespace kursach
             user1.birth_date = Convert.ToDateTime(dr.Text);
             user1.login = log.Text.ToString();
             user1.password = pas.Text.ToString();
-            App.napominatel.SaveChanges();
+            Connection.Connect1on.SaveChanges();
             pas.Text = "***";
         }
     }

@@ -53,7 +53,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Martz90-Circle-Clock.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -125,85 +126,86 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="EditTask.xaml.cs">
+    <Compile Include="Connection\Connection.cs" />
+    <Compile Include="Tasks\EditTask.xaml.cs">
       <DependentUpon>EditTask.xaml</DependentUpon>
     </Compile>
-    <Compile Include="EditUser.xaml.cs">
+    <Compile Include="User\EditUser.xaml.cs">
       <DependentUpon>EditUser.xaml</DependentUpon>
     </Compile>
-    <Compile Include="gender.cs">
+    <Compile Include="Models\gender.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model1.Context.cs">
+    <Compile Include="Models\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model1.cs">
+    <Compile Include="Models\Model1.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model1.Designer.cs">
+    <Compile Include="Models\Model1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="offMainWin.xaml.cs">
+    <Compile Include="Windows\offMainWin.xaml.cs">
       <DependentUpon>offMainWin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RegWin.xaml.cs">
+    <Compile Include="User\RegWin.xaml.cs">
       <DependentUpon>RegWin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="status.cs">
+    <Compile Include="Models\status.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="status123.cs">
+    <Compile Include="Models\status123.cs">
       <DependentUpon>supersus.tt</DependentUpon>
     </Compile>
-    <Compile Include="supersus.Context.cs">
+    <Compile Include="Models\supersus.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>supersus.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="supersus.cs">
+    <Compile Include="Models\supersus.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>supersus.tt</DependentUpon>
     </Compile>
-    <Compile Include="supersus.Designer.cs">
+    <Compile Include="Models\supersus.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>supersus.edmx</DependentUpon>
     </Compile>
-    <Compile Include="task.cs">
+    <Compile Include="Models\task.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="task123.cs">
+    <Compile Include="Models\task123.cs">
       <DependentUpon>supersus.tt</DependentUpon>
     </Compile>
-    <Compile Include="offTaskAdd.xaml.cs">
+    <Compile Include="Tasks\offTaskAdd.xaml.cs">
       <DependentUpon>offTaskAdd.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TaskAdd.xaml.cs">
+    <Compile Include="Tasks\TaskAdd.xaml.cs">
       <DependentUpon>TaskAdd.xaml</DependentUpon>
     </Compile>
-    <Compile Include="user.cs">
+    <Compile Include="Models\user.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Page Include="EditTask.xaml">
+    <Page Include="Tasks\EditTask.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="EditUser.xaml">
+    <Page Include="User\EditUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="LogWin.xaml">
+    <Page Include="Windows\LogWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -211,26 +213,26 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="LogWin.xaml.cs">
+    <Compile Include="Windows\LogWin.xaml.cs">
       <DependentUpon>LogWin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="Windows\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="offMainWin.xaml">
+    <Page Include="Windows\offMainWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RegWin.xaml">
+    <Page Include="User\RegWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="offTaskAdd.xaml">
+    <Page Include="Tasks\offTaskAdd.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="TaskAdd.xaml">
+    <Page Include="Tasks\TaskAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -253,11 +255,11 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Model1.edmx">
+    <EntityDeploy Include="Models\Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Model1.edmx.diagram">
+    <None Include="Models\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
@@ -265,11 +267,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <EntityDeploy Include="supersus.edmx">
+    <EntityDeploy Include="Models\supersus.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>supersus.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="supersus.edmx.diagram">
+    <None Include="Models\supersus.edmx.diagram">
       <DependentUpon>supersus.edmx</DependentUpon>
     </None>
     <Resource Include="resoursess\edosz.ttf" />
@@ -281,9 +283,7 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Martz90-Circle-Clock.ico" />
     <Resource Include="resoursess\Martz90-Circle-Clock.ico" />
-    <Resource Include="resoursess\anon.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
@@ -298,22 +298,23 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model1.Context.tt">
+    <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model1.tt">
+    <Content Include="Models\Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Content Include="supersus.Context.tt">
+    <Resource Include="resoursess\anon.jpg" />
+    <Content Include="Models\supersus.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>supersus.edmx</DependentUpon>
       <LastGenOutput>supersus.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="supersus.tt">
+    <Content Include="Models\supersus.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>supersus.edmx</DependentUpon>
       <LastGenOutput>supersus.cs</LastGenOutput>

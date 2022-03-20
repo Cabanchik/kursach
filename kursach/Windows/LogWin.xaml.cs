@@ -52,7 +52,7 @@ namespace kursach
         {
             try
             {
-                var user = App.napominatel.user.Where(u => u.login == log.Text && u.password == pas.Text).FirstOrDefault();
+                var user = Connection.Connect1on.user.Where(u => u.login == log.Text && u.password == pas.Text).FirstOrDefault();
                 if (user != null)
                 {
 
@@ -78,7 +78,7 @@ namespace kursach
         {
             try
             {
-                App.napominatelOff.status123.Select(s => s);
+                Connection.OffConnection.status123.Select(s => s);
             }
             catch (System.Data.Entity.Core.EntityException)
             {

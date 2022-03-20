@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace kursach
+namespace kursach.Models
 {
     using System;
     using System.Data.Entity;

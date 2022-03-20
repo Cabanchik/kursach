@@ -1,45 +1,47 @@
-﻿<Window x:Class="kursach.MainWindow"
+﻿<Window x:Class="kursach.offMainWin"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:kursach"
         mc:Ignorable="d"
-        Title="Напоминатель" WindowState="Maximized" Height="768" Width="1865.5">
+        Title="Напоминатель" WindowState="Maximized" ResizeMode="NoResize" Height="768" Width="1873.008">
     <Grid Background="#dfffc8">
         <Grid.RowDefinitions>
             <RowDefinition Height="80" ></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid Background="#2AC200" Grid.Row="0" >
-            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Background="#acf09a" Width="160" Height="50" BorderThickness="3" BorderBrush="Black" Content="Войти" Margin="10,0,0,0" FontSize="20" Click="Button_Click_3">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+
+                        </Style>
+
+                    </Button.Resources>
+                </Button>
+                <Button Background="#acf09a" Width="212" Height="50" BorderThickness="3" BorderBrush="Black" Content="Зарегистрироваться" Margin="10,15,0,15" FontSize="20" Click="Button_Click_4">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"></Setter>
+
+                        </Style>
+
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+
             <Button HorizontalAlignment="Left" Background="#acf09a" Width="160" Height="50" BorderThickness="3" BorderBrush="Black" Content="Создать задачу" Margin="10,0,0,0" FontSize="20" Click="Button_Click_1">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10"></Setter>
 
                     </Style>
-                     
+
                 </Button.Resources>
             </Button>
-           
-                <StackPanel Orientation="Horizontal" Background="Transparent" HorizontalAlignment="Right" MouseDown="StackPanel_MouseDown">
-                <Border CornerRadius="20" BorderThickness="3" Background="#acf09a">
-                    <StackPanel Orientation="Horizontal">
-                        <StackPanel  Orientation="Vertical" VerticalAlignment="Center">
-                            <Label FontSize="20" FontWeight="Bold" Content="{Binding name}" FontFamily="/kursach;component/resoursess/#Edo SZ" ></Label>
-                            <Label FontSize="20" FontWeight="Bold" Content="{Binding surname}" FontFamily="/kursach;component/resoursess/#Edo SZ"></Label>
-                        </StackPanel>
-                
-                        <Ellipse Width="80" Height="80">
-                                <Ellipse.Fill>
-                                    <ImageBrush ImageSource="{Binding user_pic, TargetNullValue={StaticResource nigger}}" />
-                                </Ellipse.Fill>
-                        </Ellipse>
-                    </StackPanel>
-                </Border>
-            </StackPanel>
-            
             <!--<Button Background="#acf09a" Width="150" Height="50" BorderThickness="3" BorderBrush="Black" Content="Войти" Margin="10,0,0,0" FontSize="20" Click="Button_Click_1">
                 <Button.Resources>
                     <Style TargetType="Border">
@@ -53,16 +55,16 @@
         <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="5,0">
             <StackPanel Orientation="Vertical" >
                 <Label Content="Начатые задачи" FontSize="30"  FontWeight="Bold" Foreground="#173D00"></Label>
-                
+
                 <ListView SelectionChanged="view_SelectionChanged"  x:Name="view" FontSize="18" Width="360"  Background="#FFFAAD" BorderThickness="3" BorderBrush="#173D00">
                     <ListView.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
                             <Setter Property="BorderThickness" Value="3"></Setter>
                         </Style>
-                        
+
                     </ListView.Resources>
-                    
+
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <Grid >
@@ -92,9 +94,9 @@
                                         </Style>
                                     </Button.Resources>
                                 </Button>
-                                
+
                             </Grid>
-                            
+
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
@@ -148,7 +150,6 @@
                     </ListView.ItemTemplate>
                 </ListView>
                 <TextBlock Visibility="Collapsed" Text="Задач нет!" FontWeight="Bold" FontSize="50" Name="null2" HorizontalAlignment="Center"></TextBlock>
-                
             </StackPanel>
             <StackPanel Orientation="Vertical" Margin="5,0" >
                 <Label Content="Скоро просрочатся" FontSize="30"  FontWeight="Bold" Foreground="#3D0600"></Label>

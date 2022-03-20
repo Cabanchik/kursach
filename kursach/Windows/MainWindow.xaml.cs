@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using kursach.Models;
 
 namespace kursach
 {
@@ -28,40 +29,40 @@ namespace kursach
             user1 = user2;
             this.DataContext = user1;
             DateTime sosi = DateTime.Now.AddDays(1);
-            foreach (var item in App.napominatel.task)
+            foreach (var item in Connection.Connect1on.task)
             {
                 if (item.end_time <= DateTime.Now && item.status_id != 3)
                 {
                     item.status_id = 5;
                 }
             }
-            App.napominatel.SaveChanges();
+            Connection.Connect1on.SaveChanges();
             
-            view.ItemsSource = App.napominatel.task.Where(t=> t.user_id == user1.user_id && t.status_id == 2).ToList();
+            view.ItemsSource = Connection.Connect1on.task.Where(t=> t.user_id == user1.user_id && t.status_id == 2).ToList();
             if (view.Items.Count == 0)
             {
                 view.Visibility = Visibility.Collapsed;
                 null1.Visibility = Visibility.Visible;
             }
-            view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
+            view2.ItemsSource = Connection.Connect1on.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
             if (view2.Items.Count == 0)
             {
                 view2.Visibility = Visibility.Collapsed;
                 null2.Visibility = Visibility.Visible;
             }
-            view3.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
+            view3.ItemsSource = Connection.Connect1on.task.Where(t => t.user_id == user1.user_id && t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
             if (view3.Items.Count == 0)
             {
                 view3.Visibility = Visibility.Collapsed;
                 null3.Visibility = Visibility.Visible;
             }
-            view4.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
+            view4.ItemsSource = Connection.Connect1on.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
             if (view4.Items.Count == 0)
             {
                 view4.Visibility = Visibility.Collapsed;
                 null4.Visibility = Visibility.Visible;
             }
-            view5.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
+            view5.ItemsSource = Connection.Connect1on.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
             if (view5.Items.Count == 0)
             {
                 view5.Visibility = Visibility.Collapsed;
@@ -82,31 +83,31 @@ namespace kursach
             TaskAdd taskAdd = new TaskAdd(user1);
             taskAdd.ShowDialog();
             DateTime sosi = DateTime.Now.AddDays(1);
-            view.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();
+            view.ItemsSource = Connection.Connect1on.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();
             if (view.Items.Count == 0)
             {
                 view.Visibility = Visibility.Collapsed;
                 null1.Visibility = Visibility.Visible;
             }
-            view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
+            view2.ItemsSource = Connection.Connect1on.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
             if (view2.Items.Count == 0)
             {
                 view2.Visibility = Visibility.Collapsed;
                 null2.Visibility = Visibility.Visible;
             }
-            view3.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
+            view3.ItemsSource = Connection.Connect1on.task.Where(t => t.user_id == user1.user_id && t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
             if (view3.Items.Count == 0)
             {
                 view3.Visibility = Visibility.Collapsed;
                 null3.Visibility = Visibility.Visible;
             }
-            view4.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
+            view4.ItemsSource = Connection.Connect1on.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
             if (view4.Items.Count == 0)
             {
                 view4.Visibility = Visibility.Collapsed;
                 null4.Visibility = Visibility.Visible;
             }
-            view5.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
+            view5.ItemsSource = Connection.Connect1on.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
             if (view5.Items.Count == 0)
             {
                 view5.Visibility = Visibility.Collapsed;
@@ -127,35 +128,35 @@ namespace kursach
             {
                 Button delete = sender as Button;
                 task deltask = delete.DataContext as task;
-                App.napominatel.task.Remove(deltask);
-                App.napominatel.SaveChanges();
+                Connection.Connect1on.task.Remove(deltask);
+                Connection.Connect1on.SaveChanges();
             }
             DateTime sosi = DateTime.Now.AddDays(1);
-            view.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();
+            view.ItemsSource = Connection.Connect1on.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();
             if (view.Items.Count == 0)
             {
                 view.Visibility = Visibility.Collapsed;
                 null1.Visibility = Visibility.Visible;
             }
-            view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
+            view2.ItemsSource = Connection.Connect1on.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
             if (view2.Items.Count == 0)
             {
                 view2.Visibility = Visibility.Collapsed;
                 null2.Visibility = Visibility.Visible;
             }
-            view3.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
+            view3.ItemsSource = Connection.Connect1on.task.Where(t => t.user_id == user1.user_id && t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
             if (view3.Items.Count == 0)
             {
                 view3.Visibility = Visibility.Collapsed;
                 null3.Visibility = Visibility.Visible;
             }
-            view4.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
+            view4.ItemsSource = Connection.Connect1on.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
             if (view4.Items.Count == 0)
             {
                 view4.Visibility = Visibility.Collapsed;
                 null4.Visibility = Visibility.Visible;
             }
-            view5.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
+            view5.ItemsSource = Connection.Connect1on.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
             if (view5.Items.Count == 0)
             {
                 view5.Visibility = Visibility.Collapsed;
@@ -195,34 +196,34 @@ namespace kursach
                 Button cont = sender as Button;
                 task curr = cont.DataContext as task;
                 curr.status_id = 3;
-                App.napominatel.SaveChanges();
+                Connection.Connect1on.SaveChanges();
             }
             DateTime sosi = DateTime.Now.AddDays(1);
-            view.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();
+            view.ItemsSource = Connection.Connect1on.task.Where(t => t.user_id == user1.user_id && t.status_id == 2).ToList();
             if (view.Items.Count == 0)
             {
                 view.Visibility = Visibility.Collapsed;
                 null1.Visibility = Visibility.Visible;
             }
-            view2.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
+            view2.ItemsSource = Connection.Connect1on.task.Where(t => t.user_id == user1.user_id && t.status_id == 1).ToList();
             if (view2.Items.Count == 0)
             {
                 view2.Visibility = Visibility.Collapsed;
                 null2.Visibility = Visibility.Visible;
             }
-            view3.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
+            view3.ItemsSource = Connection.Connect1on.task.Where(t => t.user_id == user1.user_id && t.status_id == 2 && t.end_time <= sosi && t.end_time >= DateTime.Now).ToList();
             if (view3.Items.Count == 0)
             {
                 view3.Visibility = Visibility.Collapsed;
                 null3.Visibility = Visibility.Visible;
             }
-            view4.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
+            view4.ItemsSource = Connection.Connect1on.task.Where(t => t.user_id == user1.user_id && t.status_id == 5).ToList();
             if (view4.Items.Count == 0)
             {
                 view4.Visibility = Visibility.Collapsed;
                 null4.Visibility = Visibility.Visible;
             }
-            view5.ItemsSource = App.napominatel.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
+            view5.ItemsSource = Connection.Connect1on.task.Where(t => t.user_id == user1.user_id && t.status_id == 3).ToList();
             if (view5.Items.Count == 0)
             {
                 view5.Visibility = Visibility.Collapsed;

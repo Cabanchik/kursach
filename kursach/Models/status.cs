@@ -7,29 +7,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace kursach
+namespace kursach.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class user
+    public partial class status
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public user()
+        public status()
         {
             this.task = new HashSet<task>();
         }
     
-        public int user_id { get; set; }
-        public string name { get; set; }
-        public string surname { get; set; }
-        public Nullable<int> gender_id { get; set; }
-        public Nullable<System.DateTime> birth_date { get; set; }
-        public byte[] user_pic { get; set; }
-        public string login { get; set; }
-        public string password { get; set; }
+        public int status_id { get; set; }
+        public string title { get; set; }
     
-        public virtual gender gender { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<task> task { get; set; }
     }

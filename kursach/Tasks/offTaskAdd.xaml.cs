@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using kursach.Models;
 
 namespace kursach
 {
@@ -62,8 +63,8 @@ namespace kursach
 
 
             };
-            App.napominatelOff.task123.Add(task);
-            App.napominatelOff.SaveChanges();
+            Connection.OffConnection.task123.Add(task);
+            Connection.OffConnection.SaveChanges();
             MessageBox.Show("Задача успешно создана");
             this.Close();
         }

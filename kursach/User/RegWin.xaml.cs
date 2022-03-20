@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using kursach.Models;
 
 namespace kursach
 {
@@ -22,7 +23,7 @@ namespace kursach
         public RegWin()
         {
             InitializeComponent();
-            var genda = App.napominatel.gender.Select(g => g.title).ToList();
+            var genda = Connection.Connect1on.gender.Select(g => g.title).ToList();
             
         }
 
@@ -64,9 +65,9 @@ namespace kursach
             };
             try
             {
-                
-                App.napominatel.user.Add(user);
-                App.napominatel.SaveChanges();
+
+                Connection.Connect1on.user.Add(user);
+                Connection.Connect1on.SaveChanges();
                 MessageBox.Show("РЕГИСТРАЦИЯ ПРОШЛА УСПЕШНО");
                 this.Close();
 
