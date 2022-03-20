@@ -11,7 +11,7 @@
             <Setter Property="CornerRadius" Value="10" ></Setter>
         </Style>
     </Window.Resources>
-    <Grid Background="#dfffc8">
+    <Grid Background="#FFF1BD">
 
         <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
             <Grid>
@@ -43,7 +43,7 @@
                 <Label FontSize="20" Grid.Row="5" Grid.Column="0" Content="Логин"></Label>
                 <Label FontSize="20" Grid.Row="7" Grid.Column="0" Content="Пароль"></Label>
                 
-                <TextBox x:Name="surname" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" TextChanged="TextBox_TextChanged">
+                <TextBox x:Name="surname" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="2" TextChanged="TextBox_TextChanged">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
@@ -51,14 +51,14 @@
                     </TextBox.Resources>
                 </TextBox>
                 <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
-                    <CheckBox Content="М" FontSize="20" x:Name="sex" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" Checked="sex_Checked">
+                    <CheckBox Content="М" FontSize="20" x:Name="sex" Grid.Row="3" Grid.Column="1" VerticalContentAlignment="Center" Background="#F3C892" BorderBrush="Black" BorderThickness="2" Checked="sex_Checked">
                         <CheckBox.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="10"></Setter>
                             </Style>
                         </CheckBox.Resources>
                     </CheckBox>
-                    <CheckBox Content="Ж" FontSize="20" x:Name="sex2"  VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" Checked="sex2_Checked">
+                    <CheckBox Content="Ж" FontSize="20" x:Name="sex2"  VerticalContentAlignment="Center" Background="#F3C892" BorderBrush="Black" BorderThickness="2" Checked="sex2_Checked">
                         <CheckBox.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="10"></Setter>
@@ -67,7 +67,7 @@
                     </CheckBox>
                 </StackPanel>
                 
-                <TextBox x:Name="log" Grid.Row="5" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2"  TextChanged="TextBox_TextChanged_1">
+                <TextBox x:Name="log" Grid.Row="5" Grid.Column="1" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="2"  TextChanged="TextBox_TextChanged_1">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
@@ -75,21 +75,21 @@
                     </TextBox.Resources>
                 </TextBox>
                 <DatePicker x:Name="dr" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"></DatePicker>
-                <TextBox x:Name="pas" Grid.Row="7" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2"  TextChanged="TextBox_TextChanged_1">
+                <TextBox x:Name="pas" Grid.Row="7" Grid.Column="1" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="2"  TextChanged="TextBox_TextChanged_1">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <TextBox Grid.Row="8" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2"  TextChanged="TextBox_TextChanged_1">
+                <TextBox Grid.Row="8" Grid.Column="1" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="2"  TextChanged="TextBox_TextChanged_1">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
                         </Style>
                     </TextBox.Resources>
                 </TextBox>
-                <TextBox x:Name="name"  Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" Background="#acf09a" BorderBrush="Black" BorderThickness="2" TextChanged="TextBox_TextChanged_2">
+                <TextBox x:Name="name"  Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center" BorderBrush="Black" BorderThickness="2" TextChanged="TextBox_TextChanged_2">
                     <TextBox.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="10"></Setter>
@@ -97,7 +97,7 @@
                     </TextBox.Resources>
                 </TextBox>
                 <StackPanel Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Vertical" HorizontalAlignment="Center"  >
-                    <Button VerticalContentAlignment="Center" FontSize="20" Content="Зарегистрироваться" Margin="0,5" Background="#acf09a" BorderThickness="3" BorderBrush="Black" Height="52" Width="205" Click="Button_Click">
+                    <Button VerticalContentAlignment="Center" FontSize="20" Content="Зарегистрироваться" Margin="0,5" BorderThickness="3" BorderBrush="Black" Height="52" Width="205" Click="Button_Click">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="10"></Setter>

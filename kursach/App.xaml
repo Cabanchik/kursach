@@ -7,7 +7,15 @@
         <ResourceDictionary>
             <BitmapImage x:Key="nigger" UriSource="../resoursess/anon.jpg"></BitmapImage>
             <FontFamily x:Key="yakuza" >resoursess/edosz.ttf</FontFamily>
+            <Style TargetType="Button">
+                <Setter Property="Background" Value="#F3C892"></Setter>
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="Background" Value="#F3C892"></Setter>
+            </Style>
         </ResourceDictionary>
+        
+       
     </Application.Resources>
     
 </Application>

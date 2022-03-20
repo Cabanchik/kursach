@@ -11,9 +11,9 @@
             <RowDefinition Height="80" ></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Grid Background="#2AC200" Grid.Row="0" >
+        <Grid Background="#F3C892" Grid.Row="0" >
             
-            <Button HorizontalAlignment="Left" Background="#acf09a" Width="160" Height="50" BorderThickness="3" BorderBrush="Black" Content="Создать задачу" Margin="10,0,0,0" FontSize="20" Click="Button_Click_1">
+            <Button HorizontalAlignment="Left" Width="160" Height="50" BorderThickness="3" BorderBrush="Black" Content="Создать задачу" Margin="10,0,0,0" FontSize="20" Click="Button_Click_1">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="10"></Setter>
@@ -24,7 +24,7 @@
             </Button>
            
                 <StackPanel Orientation="Horizontal" Background="Transparent" HorizontalAlignment="Right" MouseDown="StackPanel_MouseDown">
-                <Border CornerRadius="20" BorderThickness="3" Background="#acf09a">
+                <Border CornerRadius="20" BorderThickness="3" Background="#FFF1BD">
                     <StackPanel Orientation="Horizontal">
                         <StackPanel  Orientation="Vertical" VerticalAlignment="Center">
                             <Label FontSize="20" FontWeight="Bold" Content="{Binding name}" FontFamily="/kursach;component/resoursess/#Edo SZ" ></Label>
@@ -75,7 +75,7 @@
                                     <RowDefinition></RowDefinition>
                                 </Grid.RowDefinitions>
                                 <TextBlock TextWrapping="Wrap" Text="{Binding title}" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"></TextBlock>
-                                <Button Background="#acf09a" Click="Button_Click_2" FontWeight="Bold" BorderThickness="3" Foreground="#173D00"  BorderBrush="#173D00" Content="Завершить" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                <Button Click="Button_Click_2" FontWeight="Bold" BorderThickness="3" Foreground="#173D00"  BorderBrush="#173D00" Content="Завершить" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
                                     <Button.Resources>
                                         <Style TargetType="Border">
                                             <Setter Property="CornerRadius" Value="10"></Setter>
@@ -84,7 +84,7 @@
                                     </Button.Resources>
                                 </Button>
 
-                                <Button Background="#FF8080" FontWeight="Bold" BorderThickness="3" Click="Button_Click" Foreground="#A80A00"  BorderBrush="#A80A00" Content="Удалить" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                <Button FontWeight="Bold" BorderThickness="3" Click="Button_Click" Foreground="#A80A00"  BorderBrush="#A80A00" Content="Удалить" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right">
                                     <Button.Resources>
                                         <Style TargetType="Border">
                                             <Setter Property="CornerRadius" Value="10"></Setter>
@@ -124,7 +124,7 @@
                                 </Grid.RowDefinitions>
                                 <TextBlock Grid.Row="0" Grid.Column="1" Visibility="Collapsed" Text="Задач нет!" FontSize="30"></TextBlock>
                                 <TextBlock TextWrapping="Wrap" Text="{Binding title}" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"></TextBlock>
-                                <Button Background="#acf09a" FontWeight="Bold" BorderThickness="3" Click="Button_Click_2" Foreground="#173D00"  BorderBrush="#173D00" Content="Завершить" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                <Button FontWeight="Bold" BorderThickness="3" Click="Button_Click_2" Foreground="#173D00"  BorderBrush="#173D00" Content="Завершить" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
                                     <Button.Resources>
                                         <Style TargetType="Border">
                                             <Setter Property="CornerRadius" Value="10"></Setter>
@@ -133,7 +133,7 @@
                                     </Button.Resources>
                                 </Button>
 
-                                <Button Background="#FF8080" FontWeight="Bold" BorderThickness="3" Click="Button_Click" Foreground="#A80A00"  BorderBrush="#A80A00" Content="Удалить" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                <Button FontWeight="Bold" BorderThickness="3" Click="Button_Click" Foreground="#A80A00"  BorderBrush="#A80A00" Content="Удалить" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right">
                                     <Button.Resources>
                                         <Style TargetType="Border">
                                             <Setter Property="CornerRadius" Value="10"></Setter>
@@ -173,7 +173,7 @@
                                     <RowDefinition></RowDefinition>
                                 </Grid.RowDefinitions>
                                 <TextBlock TextWrapping="Wrap" Text="{Binding title}" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Left"></TextBlock>
-                                <Button Background="#acf09a" FontWeight="Bold" BorderThickness="3" Click="Button_Click_2" Foreground="#173D00"  BorderBrush="#173D00" Content="Завершить" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                <Button FontWeight="Bold" BorderThickness="3" Click="Button_Click_2" Foreground="#173D00"  BorderBrush="#173D00" Content="Завершить" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right">
                                     <Button.Resources>
                                         <Style TargetType="Border">
                                             <Setter Property="CornerRadius" Value="10"></Setter>
@@ -182,7 +182,7 @@
                                     </Button.Resources>
                                 </Button>
 
-                                <Button Background="#FF8080" FontWeight="Bold" BorderThickness="3" Click="Button_Click" Foreground="#A80A00"  BorderBrush="#A80A00" Content="Удалить" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                <Button FontWeight="Bold" BorderThickness="3" Click="Button_Click" Foreground="#A80A00"  BorderBrush="#A80A00" Content="Удалить" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right">
                                     <Button.Resources>
                                         <Style TargetType="Border">
                                             <Setter Property="CornerRadius" Value="10"></Setter>
@@ -230,7 +230,7 @@
                                     </Button.Resources>
                                 </Button>-->
 
-                                <Button Background="#FF8080" FontWeight="Bold" BorderThickness="3" Click="Button_Click" Foreground="#A80A00"  BorderBrush="#A80A00" Content="Удалить" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                <Button FontWeight="Bold" BorderThickness="3" Click="Button_Click" Foreground="#A80A00"  BorderBrush="#A80A00" Content="Удалить" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right">
                                     <Button.Resources>
                                         <Style TargetType="Border">
                                             <Setter Property="CornerRadius" Value="10"></Setter>
@@ -278,7 +278,7 @@
                                     </Button.Resources>
                                 </Button>-->
 
-                                <Button Background="#FF8080" FontWeight="Bold" BorderThickness="3" Click="Button_Click" Foreground="#A80A00"  BorderBrush="#A80A00" Content="Удалить" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right">
+                                <Button FontWeight="Bold" BorderThickness="3" Click="Button_Click" Foreground="#A80A00"  BorderBrush="#A80A00" Content="Удалить" Grid.Row="0" Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Right">
                                     <Button.Resources>
                                         <Style TargetType="Border">
                                             <Setter Property="CornerRadius" Value="10"></Setter>

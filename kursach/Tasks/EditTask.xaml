@@ -10,7 +10,7 @@
     <Window.Template>
         <ControlTemplate>
 
-            <Border BorderThickness="5" CornerRadius="100"  Background="#acf09a" BorderBrush="#173D00">
+            <Border BorderThickness="5" CornerRadius="100" Background="#FFF1BD" BorderBrush="#F3C892">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
@@ -45,7 +45,7 @@
 
 
                     </Grid>
-                    <Button Background="#237A00" Click="Button_Click" Content="X" HorizontalAlignment="Left" Margin="422,29,0,0" VerticalAlignment="Top" Width="15" Height="19">
+                    <Button Background="#F3C892" Click="Button_Click" Content="X" HorizontalAlignment="Left" Margin="422,29,0,0" VerticalAlignment="Top" Width="15" Height="19">
                         <Button.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="2"></Setter>

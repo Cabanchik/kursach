@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:kursach"
         mc:Ignorable="d"
         Title="Добавление задачи" Height="450" Width="800" WindowStyle="None" AllowsTransparency="True" Background="Transparent">
-    <Border CornerRadius="50" BorderThickness="3" BorderBrush="#237A00" Background="#dfffc8">
+    <Border CornerRadius="50" BorderThickness="3" BorderBrush="#F3C892" Background="#FFF1BD">
         <Grid>
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
                 <Grid>
@@ -27,7 +27,7 @@
                     <Label FontWeight="Bold" FontSize="20" Grid.Row="0" Grid.Column="0" Content="Создание задачи" Grid.ColumnSpan="2" HorizontalContentAlignment="Center" ></Label>
                     <Label FontSize="20" Grid.Row="1" Grid.Column="0" Content="Задача" Margin="0,0,26,0"></Label>
                     <Label FontSize="20" Grid.Row="2" Grid.Column="0" Content="Время начала" Margin="0,0,13,0"></Label>
-                    <TextBox x:Name="tas" Grid.Row="1" VerticalContentAlignment="Center" FontSize="15" Grid.Column="1" Background="#acf09a" BorderBrush="Black" BorderThickness="2" TextChanged="TextBox_TextChanged">
+                    <TextBox x:Name="tas" Grid.Row="1" VerticalContentAlignment="Center" FontSize="15" Grid.Column="1" BorderBrush="Black" BorderThickness="2" TextChanged="TextBox_TextChanged">
                         <TextBox.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="10"></Setter>
@@ -35,9 +35,9 @@
                         </TextBox.Resources>
                     </TextBox>
                     <Label FontSize="20" Grid.Row="3" Grid.Column="0" Content="Время завершения" Margin="0,0,13,0"></Label>
-                    <xctk:DateTimePicker  Format="Custom" FormatString="dd/MM/yyyy hh:mm tt" x:Name="end" Grid.Row="3" VerticalContentAlignment="Center" FontSize="15" Grid.Column="1" Background="#acf09a" BorderBrush="Black" BorderThickness="2" ></xctk:DateTimePicker>
+                    <xctk:DateTimePicker  Format="Custom" FormatString="dd/MM/yyyy hh:mm tt" x:Name="end" Grid.Row="3" VerticalContentAlignment="Center" FontSize="15" Grid.Column="1" Background="#F3C892" BorderBrush="Black" BorderThickness="2" ></xctk:DateTimePicker>
                     <Label FontSize="20" Grid.Row="4" Grid.Column="0" Content="Описание" Margin="0,0,13,0"></Label>
-                    <TextBox x:Name="annotation" Grid.Row="4" VerticalContentAlignment="Center" FontSize="15" Grid.Column="1" Background="#acf09a" BorderBrush="Black" BorderThickness="2" TextChanged="TextBox_TextChanged">
+                    <TextBox x:Name="annotation" Grid.Row="4" VerticalContentAlignment="Center" FontSize="15" Grid.Column="1" Background="#F3C892" BorderBrush="Black" BorderThickness="2" TextChanged="TextBox_TextChanged">
                         <TextBox.Resources>
                             <Style TargetType="Border">
                                 <Setter Property="CornerRadius" Value="10"></Setter>
@@ -45,11 +45,11 @@
                         </TextBox.Resources>
                     </TextBox>
 
-                    <xctk:DateTimePicker  Format="Custom" FormatString="dd/MM/yyyy hh:mm tt" x:Name="start" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" FontSize="15" Background="#acf09a" BorderBrush="Black" BorderThickness="2" />
+                    <xctk:DateTimePicker  Format="Custom" FormatString="dd/MM/yyyy hh:mm tt" x:Name="start" Grid.Row="2" Grid.Column="1" VerticalContentAlignment="Center" FontSize="15" Background="#F3C892" BorderBrush="Black" BorderThickness="2" />
 
 
                     <StackPanel Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Vertical" HorizontalAlignment="Center"  >
-                        <Button Background="#acf09a" BorderThickness="3" BorderBrush="Black" Content="Создать" Margin="0,5" FontSize="20" Click="Button_Click" >
+                        <Button BorderThickness="3" BorderBrush="Black" Content="Создать" Margin="0,5" FontSize="20" Click="Button_Click" >
                             <Button.Resources>
                                 <Style TargetType="Border">
                                     <Setter Property="CornerRadius" Value="10"></Setter>
@@ -67,7 +67,7 @@
                 </Grid>
 
             </StackPanel>
-            <Button Background="#237A00" Click="Button_Click_1" Content="X" HorizontalAlignment="Left" Margin="734,32,0,0" VerticalAlignment="Top" Width="17" Height="28">
+            <Button Background="#F3C892" Click="Button_Click_1" Content="X" HorizontalAlignment="Left" Margin="734,32,0,0" VerticalAlignment="Top" Width="17" Height="28">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="2"></Setter>
