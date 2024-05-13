@@ -31,11 +31,11 @@
                             <Label FontSize="20" FontWeight="Bold" Content="{Binding surname}" FontFamily="/kursach;component/resoursess/#Edo SZ"></Label>
                         </StackPanel>
                 
-                        <Ellipse Width="80" Height="80">
+                        <!--<Ellipse Width="80" Height="80">
                                 <Ellipse.Fill>
                                     <ImageBrush ImageSource="{Binding user_pic, TargetNullValue={StaticResource nigger}}" />
                                 </Ellipse.Fill>
-                        </Ellipse>
+                        </Ellipse>-->
                     </StackPanel>
                 </Border>
             </StackPanel>

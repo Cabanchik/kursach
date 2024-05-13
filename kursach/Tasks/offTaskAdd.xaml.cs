@@ -52,19 +52,8 @@ namespace kursach
                 stat = 2; 
             }
             DateTime now = DateTime.Now;
-            task123 task = new task123()
-            {
-                title = tas.Text.ToString(),
-                start_time = Convert.ToDateTime(start.Text),
-                end_time = Convert.ToDateTime(end.Text),
-                annotation = annotation.Text.ToString(),
-                purpose_time = now,                
-                status_id = stat
+            
 
-
-            };
-            Connection.OffConnection.task123.Add(task);
-            Connection.OffConnection.SaveChanges();
             MessageBox.Show("Задача успешно создана");
             this.Close();
         }

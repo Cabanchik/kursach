@@ -13,10 +13,10 @@ namespace kursach.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class heroku_e7222c258ac0aa4Entities1 : DbContext
+    public partial class kursuchEntities : DbContext
     {
-        public heroku_e7222c258ac0aa4Entities1()
-            : base("name=heroku_e7222c258ac0aa4Entities1")
+        public kursuchEntities()
+            : base("name=kursuchEntities")
         {
         }
     
@@ -27,6 +27,7 @@ namespace kursach.Models
     
         public virtual DbSet<gender> gender { get; set; }
         public virtual DbSet<status> status { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<task> task { get; set; }
         public virtual DbSet<user> user { get; set; }
     }

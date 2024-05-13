@@ -12,17 +12,12 @@ namespace kursach.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class task123
+    public partial class sysdiagrams
     {
-        public int id { get; set; }
-        public string title { get; set; }
-        public Nullable<System.DateTime> purpose_time { get; set; }
-        public Nullable<System.DateTime> start_time { get; set; }
-        public Nullable<int> status_id { get; set; }
-        public string annotation { get; set; }
-        public Nullable<System.DateTime> end_time { get; set; }
-        public Nullable<int> user_id { get; set; }
-    
-        public virtual status123 status123 { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

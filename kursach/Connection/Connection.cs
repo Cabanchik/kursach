@@ -9,7 +9,7 @@ namespace kursach
 {
     class Connection
     {
-        public static heroku_e7222c258ac0aa4Entities1 Connect1on = new heroku_e7222c258ac0aa4Entities1();
-        public static napominatelEntities2 OffConnection = new napominatelEntities2();
+        public static kursuchEntities DBcontext = new kursuchEntities();
+        //public static napominatelEntities2 OffConnection = new napominatelEntities2();
     }
 }

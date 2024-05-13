@@ -4,14 +4,15 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="54e4553ea2474d87ab734928b22e9363" Name="Diagram1">
-        <EntityTypeShape EntityType="heroku_e7222c258ac0aa4Model.gender" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="heroku_e7222c258ac0aa4Model.status" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="heroku_e7222c258ac0aa4Model.task" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="heroku_e7222c258ac0aa4Model.user" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <AssociationConnector Association="heroku_e7222c258ac0aa4Model.supersus2" ManuallyRouted="false" />
-        <AssociationConnector Association="heroku_e7222c258ac0aa4Model.supersus" ManuallyRouted="false" />
-        <AssociationConnector Association="heroku_e7222c258ac0aa4Model.megasus" ManuallyRouted="false" />
+      <Diagram DiagramId="8ffd85ea43194f42b956458b071bde4a" Name="Diagram1">
+        <EntityTypeShape EntityType="kursuchModel.gender" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="kursuchModel.status" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="kursuchModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="kursuchModel.task" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="kursuchModel.user" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="kursuchModel.FK_user_gender" ManuallyRouted="false" />
+        <AssociationConnector Association="kursuchModel.FK_task_status" ManuallyRouted="false" />
+        <AssociationConnector Association="kursuchModel.FK_task_user" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

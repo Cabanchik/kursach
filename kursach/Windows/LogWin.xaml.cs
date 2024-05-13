@@ -50,9 +50,9 @@ namespace kursach
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                var user = Connection.Connect1on.user.Where(u => u.login == log.Text && u.password == pas.Text).FirstOrDefault();
+            //try
+            //{
+                var user = Connection.DBcontext.user.Where(u => u.login == log.Text && u.password == pas.Text).FirstOrDefault();
                 if (user != null)
                 {
 
@@ -64,11 +64,11 @@ namespace kursach
                 {
                     MessageBox.Show("Логин или пароль введен неверно!");
                 }
-            }
-            catch (System.Data.Entity.Core.EntityException)
-            {
-                MessageBox.Show("Отсутсвует интернет соединение");                
-            }
+            //}
+            //catch (System.Data.Entity.Core.EntityException)
+            //{
+            //    MessageBox.Show("Отсутсвует интернет соединение");                
+            //}
             
             
             
@@ -78,15 +78,14 @@ namespace kursach
         {
             try
             {
-                Connection.OffConnection.status123.Select(s => s);
+                //Connection.OffConnection.status123.Select(s => s);
             }
             catch (System.Data.Entity.Core.EntityException)
             {
 
                 MessageBox.Show("Невозмонжо подключиться к базе");
             }
-            offMainWin offMainWin = new offMainWin();
-            offMainWin.ShowDialog();
+            
             this.Close();
         }
     }

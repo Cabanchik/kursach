@@ -64,8 +64,8 @@ namespace kursach
 
 
             };
-            Connection.Connect1on.task.Add(task);
-            Connection.Connect1on.SaveChanges();
+            Connection.DBcontext.task.Add(task);
+            Connection.DBcontext.SaveChanges();
             MessageBox.Show("Задача успешно создана");
             this.Close();
         }

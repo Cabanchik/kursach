@@ -23,7 +23,7 @@ namespace kursach
         public RegWin()
         {
             InitializeComponent();
-            var genda = Connection.Connect1on.gender.Select(g => g.title).ToList();
+            var genda = Connection.DBcontext.gender.Select(g => g.title).ToList();
             
         }
 
@@ -66,8 +66,8 @@ namespace kursach
             try
             {
 
-                Connection.Connect1on.user.Add(user);
-                Connection.Connect1on.SaveChanges();
+                Connection.DBcontext.user.Add(user);
+                Connection.DBcontext.SaveChanges();
                 MessageBox.Show("РЕГИСТРАЦИЯ ПРОШЛА УСПЕШНО");
                 this.Close();
 
