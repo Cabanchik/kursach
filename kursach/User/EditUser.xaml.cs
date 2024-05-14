@@ -59,62 +59,7 @@ namespace kursach
             
         }
 
-        //private void Ellipse_Drop(object sender, DragEventArgs e)
-        //{
-        //    System.Drawing.Image ii;
-        //    if (e.Data.GetDataPresent(DataFormats.FileDrop))
-        //    {
-                
-        //        string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-
-        //        string fin = System.IO.Path.GetFullPath(files[0]);
-
-        //        dicpic.ImageSource = new BitmapImage(new Uri(fin));
-        //        ii = new System.Drawing.Bitmap(fin);
-        //        user1.user_pic = ImageToByte(ii);
-        //        Connection.DBcontext.SaveChanges();
-        //    }
-        //}
-        private void Ellipse_Drop(object sender, DragEventArgs e)
-        {
-
-            if (e.Data.GetDataPresent(DataFormats.FileDrop))
-            {
-
-                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-
-                string fin = System.IO.Path.GetFullPath(files[0]);
-
-                dicpic.ImageSource = new BitmapImage(new Uri(fin));
-                user1.user_pic = ImageToByte(new BitmapImage(new Uri(fin)));
-                try
-                {
-                
-                    Connection.DBcontext.SaveChanges();
-                }
-                catch (DbEntityValidationException h)
-                {
-                    foreach (var eve in h.EntityValidationErrors)
-                    {
-                        Console.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:", eve.Entry.Entity.GetType().Name, eve.Entry.State);
-                        foreach (var ve in eve.ValidationErrors)
-                        {
-                            Console.WriteLine("- Property: \"{0}\", Error: \"{1}\"", ve.PropertyName, ve.ErrorMessage);
-                        }
-                    }
-                    throw;
-                }
-                
-            }
-        }
-        public static byte[] ImageToByte(BitmapImage image)
-        {
-            MemoryStream memoryStream = new MemoryStream();
-            JpegBitmapEncoder jpegBitmapEncoder = new JpegBitmapEncoder();
-            jpegBitmapEncoder.Frames.Add(BitmapFrame.Create(image));
-            jpegBitmapEncoder.Save(memoryStream);
-            return memoryStream.ToArray();
-        }
+        
 
         private void edit1_Click(object sender, RoutedEventArgs e)
         {
